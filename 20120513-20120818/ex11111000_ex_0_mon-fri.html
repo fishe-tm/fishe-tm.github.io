@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZW5va2lwcHQiLCJhIjoiY2tub3NkZmE5MTl2dDJvcGJxMHJ1czZ3byJ9.wNAYXsX8CPy032JW0RQJMA';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Timetable generated on Mon Jul 25 2022 17:59:23 GMT-0600 (Mountain Daylight Time) using GTFS-to-HTML version 2.4.0 -->
+  <div class="timetable-page menu-type-simple">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center">
+        <div class="route-color-swatch-large mr-2 flex-none" style="background-color: #2F4F2F; color: #FFFFFF">EX</div>
+        <div>Route EX</div>
+      </h1>
+      <div class="effective-date text-gray-600 mb-2">Effective May 12, 2012</div>
+      <div class="timetable mb-10" id="timetable_id_EX11111000" data-day-list="Mon-Fri" data-direction-name="EX Denver  EX Express" data-timetable-id="EX|1111100|0" data-direction-id="0" data-route-id="EX">
+        <h2 class="text-xl">Route EX - Evergreen pnR to Civic Center Station | monday-friday</h2>
+        <div class="map" id="map_timetable_id_EX11111000"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_EX11111000",
+              "routes": {
+                "0": {
+                  "route_id": "0",
+                  "route_short_name": "0",
+                  "route_long_name": "South Broadway",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "6": {
+                  "route_id": "6",
+                  "route_short_name": "6",
+                  "route_long_name": "East 6th Avenue / North Pecos",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "10": {
+                  "route_id": "10",
+                  "route_short_name": "10",
+                  "route_long_name": "East 12th Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "16": {
+                  "route_id": "16",
+                  "route_short_name": "16",
+                  "route_long_name": "West Colfax Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "0L": {
+                  "route_id": "0L",
+                  "route_short_name": "0L",
+                  "route_long_name": "South Broadway Limited",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "2X": {
+                  "route_id": "2X",
+                  "route_short_name": "2X",
+                  "route_long_name": "Morrison Express",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "3L": {
+                  "route_id": "3L",
+                  "route_short_name": "3L",
+                  "route_long_name": "East Alameda Limited",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "5X": {
+                  "route_id": "5X",
+                  "route_short_name": "5X",
+                  "route_long_name": "Federal Center Express",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "79L": {
+                  "route_id": "79L",
+                  "route_short_name": "79L",
+                  "route_long_name": "Cherry Creek / Dayton Limited",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "83L": {
+                  "route_id": "83L",
+                  "route_short_name": "83L",
+                  "route_long_name": "Cherry Creek / Parker Rd Limited",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "87X": {
+                  "route_id": "87X",
+                  "route_short_name": "87X",
+                  "route_long_name": "South Wadsworth Express",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "100X": {
+                  "route_id": "100X",
+                  "route_short_name": "100X",
+                  "route_long_name": "South Kipling Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "116X": {
+                  "route_id": "116X",
+                  "route_short_name": "116X",
+                  "route_long_name": "South Simms Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "CS": {
+                  "route_id": "CS",
+                  "route_short_name": "CS",
+                  "route_long_name": "CS Pine Junction / Conifer / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "CV": {
+                  "route_id": "CV",
+                  "route_short_name": "CV",
+                  "route_long_name": "CV Pine Junction / Conifer / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "CX": {
+                  "route_id": "CX",
+                  "route_short_name": "CX",
+                  "route_long_name": "CX Pine Junction / Conifer / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "ES": {
+                  "route_id": "ES",
+                  "route_short_name": "ES",
+                  "route_long_name": "ES Evergreen / Aspen Park / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "EV": {
+                  "route_id": "EV",
+                  "route_short_name": "EV",
+                  "route_long_name": "EV Evergreen / Aspen Park / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "EX": {
+                  "route_id": "EX",
+                  "route_short_name": "EX",
+                  "route_long_name": "EX Evergreen / Aspen Park / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "P": {
+                  "route_id": "P",
+                  "route_short_name": "P",
+                  "route_long_name": "Parker / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "16L": {
+                  "route_id": "16L",
+                  "route_short_name": "16L",
+                  "route_long_name": "West Colfax Limited",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "47X": {
+                  "route_id": "47X",
+                  "route_short_name": "47X",
+                  "route_long_name": "Green Valley Ranch/Montbello Exp",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "122X": {
+                  "route_id": "122X",
+                  "route_short_name": "122X",
+                  "route_long_name": "Wagon Road / Civic Center Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "HX": {
+                  "route_id": "HX",
+                  "route_short_name": "HX",
+                  "route_long_name": "28th Street/ Civic Center",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "R": {
+                  "route_id": "R",
+                  "route_short_name": "R",
+                  "route_long_name": "Brighton / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "RC": {
+                  "route_id": "RC",
+                  "route_short_name": "RC",
+                  "route_long_name": "RC Brighton / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "RX": {
+                  "route_id": "RX",
+                  "route_short_name": "RX",
+                  "route_long_name": "RX Brighton / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2F4F2F"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-105.33208, 39.63884],
+                      [-105.3323, 39.63904],
+                      [-105.33247, 39.63923],
+                      [-105.33332, 39.64038],
+                      [-105.33361, 39.64072],
+                      [-105.33458, 39.64175],
+                      [-105.33433, 39.64193],
+                      [-105.33062, 39.63796],
+                      [-105.33036, 39.63763],
+                      [-105.33009, 39.63726],
+                      [-105.32962, 39.63601],
+                      [-105.32942, 39.63515],
+                      [-105.32931, 39.63483],
+                      [-105.32912, 39.63438],
+                      [-105.32899, 39.63419],
+                      [-105.32891, 39.63411],
+                      [-105.32869, 39.63396],
+                      [-105.32856, 39.63389],
+                      [-105.32829, 39.6338],
+                      [-105.32815, 39.63376],
+                      [-105.32786, 39.63374],
+                      [-105.32773, 39.63374],
+                      [-105.32769, 39.63375],
+                      [-105.32714, 39.63376],
+                      [-105.32639, 39.63373],
+                      [-105.32613, 39.6337],
+                      [-105.32579, 39.63362],
+                      [-105.32564, 39.63356],
+                      [-105.32527, 39.63337],
+                      [-105.32489, 39.63313],
+                      [-105.32454, 39.63285],
+                      [-105.3241, 39.63244],
+                      [-105.32384, 39.63224],
+                      [-105.32355, 39.63209],
+                      [-105.32331, 39.63202],
+                      [-105.32309, 39.632],
+                      [-105.32289, 39.63201],
+                      [-105.32268, 39.6321],
+                      [-105.32235, 39.63226],
+                      [-105.32203, 39.63236],
+                      [-105.3213, 39.63252],
+                      [-105.32115, 39.63251],
+                      [-105.32103, 39.63247],
+                      [-105.32101, 39.63244],
+                      [-105.32084, 39.63254],
+                      [-105.32065, 39.63261],
+                      [-105.31888, 39.63295],
+                      [-105.31864, 39.63302],
+                      [-105.31825, 39.63322],
+                      [-105.31715, 39.63387],
+                      [-105.31669, 39.63409],
+                      [-105.3157, 39.63449],
+                      [-105.31545, 39.63467],
+                      [-105.31534, 39.63483],
+                      [-105.31528, 39.63503],
+                      [-105.31525, 39.6354],
+                      [-105.31526, 39.63552],
+                      [-105.31535, 39.63583],
+                      [-105.31536, 39.63595],
+                      [-105.31535, 39.63611],
+                      [-105.31526, 39.63639],
+                      [-105.31555, 39.63651],
+                      [-105.31573, 39.63669],
+                      [-105.31583, 39.63683],
+                      [-105.31611, 39.63747],
+                      [-105.31624, 39.63759],
+                      [-105.31639, 39.63769],
+                      [-105.3167, 39.63779],
+                      [-105.31698, 39.63785],
+                      [-105.31727, 39.63789],
+                      [-105.31779, 39.63785],
+                      [-105.31843, 39.63785],
+                      [-105.31867, 39.63788],
+                      [-105.31887, 39.63791],
+                      [-105.31959, 39.63821],
+                      [-105.32025, 39.63828],
+                      [-105.32167, 39.63837],
+                      [-105.32307, 39.63844],
+                      [-105.32449, 39.6384],
+                      [-105.32546, 39.63831],
+                      [-105.32578, 39.63827],
+                      [-105.32656, 39.63811],
+                      [-105.32773, 39.63794],
+                      [-105.32903, 39.63792],
+                      [-105.32943, 39.6385],
+                      [-105.33046, 39.63858],
+                      [-105.33112, 39.6388],
+                      [-105.33161, 39.63934],
+                      [-105.33278, 39.64072],
+                      [-105.33298, 39.64081],
+                      [-105.33322, 39.64075],
+                      [-105.33087, 39.63789],
+                      [-105.33096, 39.63788],
+                      [-105.33099, 39.6379],
+                      [-105.33132, 39.63827],
+                      [-105.33208, 39.63884]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2F4F2F"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-105.33458, 39.64175],
+                      [-105.33479, 39.64247],
+                      [-105.33566, 39.64362],
+                      [-105.33669, 39.6447],
+                      [-105.33893, 39.64673],
+                      [-105.34109, 39.64852],
+                      [-105.34182, 39.6493],
+                      [-105.34257, 39.65003],
+                      [-105.34369, 39.65106],
+                      [-105.34527, 39.65237],
+                      [-105.34558, 39.65266],
+                      [-105.346, 39.65307],
+                      [-105.34642, 39.65346],
+                      [-105.34691, 39.65394],
+                      [-105.34998, 39.65707],
+                      [-105.35111, 39.65816],
+                      [-105.35176, 39.65891],
+                      [-105.35242, 39.65964],
+                      [-105.35408, 39.6617],
+                      [-105.35443, 39.66222],
+                      [-105.35509, 39.66328],
+                      [-105.3568, 39.667],
+                      [-105.35714, 39.66768],
+                      [-105.35736, 39.66808],
+                      [-105.35766, 39.66849],
+                      [-105.35793, 39.66882],
+                      [-105.35838, 39.66928],
+                      [-105.35973, 39.6705],
+                      [-105.36019, 39.67097],
+                      [-105.36058, 39.67139],
+                      [-105.36159, 39.67258],
+                      [-105.36159, 39.67267],
+                      [-105.36372, 39.67518],
+                      [-105.36416, 39.67588],
+                      [-105.36465, 39.67684],
+                      [-105.36501, 39.6778],
+                      [-105.36518, 39.67851],
+                      [-105.36522, 39.67919],
+                      [-105.36499, 39.68077],
+                      [-105.365, 39.68144],
+                      [-105.36518, 39.68192],
+                      [-105.36601, 39.6834],
+                      [-105.36618, 39.68385],
+                      [-105.36623, 39.6842],
+                      [-105.36623, 39.68477],
+                      [-105.36613, 39.68532],
+                      [-105.3649, 39.68846],
+                      [-105.36472, 39.68915],
+                      [-105.36457, 39.69062],
+                      [-105.36434, 39.69115],
+                      [-105.36394, 39.69194],
+                      [-105.36342, 39.69279],
+                      [-105.36331, 39.69294],
+                      [-105.36307, 39.69315],
+                      [-105.36262, 39.69346],
+                      [-105.36223, 39.69366],
+                      [-105.36197, 39.69377],
+                      [-105.36165, 39.69388],
+                      [-105.36129, 39.69397],
+                      [-105.36099, 39.69402],
+                      [-105.36057, 39.69406],
+                      [-105.35701, 39.69407],
+                      [-105.35452, 39.69411],
+                      [-105.35287, 39.6941],
+                      [-105.35215, 39.69406],
+                      [-105.35183, 39.69403],
+                      [-105.35125, 39.69394],
+                      [-105.3507, 39.69381],
+                      [-105.3469, 39.69252],
+                      [-105.34459, 39.69166],
+                      [-105.34404, 39.69149],
+                      [-105.34349, 39.69135],
+                      [-105.34321, 39.69131],
+                      [-105.34263, 39.69125],
+                      [-105.342, 39.69125],
+                      [-105.34154, 39.69127],
+                      [-105.34009, 39.69143],
+                      [-105.33975, 39.69151],
+                      [-105.33941, 39.69163],
+                      [-105.33912, 39.6918],
+                      [-105.33898, 39.6919],
+                      [-105.33875, 39.69212],
+                      [-105.33858, 39.69235],
+                      [-105.33845, 39.69263],
+                      [-105.33824, 39.69325],
+                      [-105.33812, 39.69372],
+                      [-105.33809, 39.69388],
+                      [-105.33807, 39.69408],
+                      [-105.33807, 39.6943],
+                      [-105.33812, 39.69462],
+                      [-105.33816, 39.69473],
+                      [-105.33828, 39.69502],
+                      [-105.33838, 39.69519],
+                      [-105.33887, 39.696],
+                      [-105.33897, 39.69624],
+                      [-105.33902, 39.69646],
+                      [-105.33903, 39.69659],
+                      [-105.33901, 39.69678],
+                      [-105.33897, 39.69694],
+                      [-105.3389, 39.6971],
+                      [-105.33869, 39.69738],
+                      [-105.3385, 39.69754],
+                      [-105.33828, 39.6977],
+                      [-105.338, 39.69785],
+                      [-105.33742, 39.69814],
+                      [-105.33554, 39.69893],
+                      [-105.33526, 39.69901],
+                      [-105.33487, 39.69907],
+                      [-105.33447, 39.69905],
+                      [-105.33262, 39.69871],
+                      [-105.33226, 39.6987],
+                      [-105.33198, 39.69873],
+                      [-105.33165, 39.69881],
+                      [-105.33143, 39.6989],
+                      [-105.33122, 39.69902],
+                      [-105.33096, 39.6992],
+                      [-105.33076, 39.69942],
+                      [-105.33053, 39.69984],
+                      [-105.33039, 39.70014],
+                      [-105.3302, 39.70042],
+                      [-105.33004, 39.70061],
+                      [-105.32919, 39.70135],
+                      [-105.32894, 39.70159],
+                      [-105.32732, 39.70339],
+                      [-105.32683, 39.70383],
+                      [-105.32626, 39.70426],
+                      [-105.32502, 39.7051],
+                      [-105.32368, 39.70599],
+                      [-105.32338, 39.70628],
+                      [-105.32267, 39.70675],
+                      [-105.32143, 39.70755],
+                      [-105.32082, 39.70797],
+                      [-105.31893, 39.70934],
+                      [-105.31854, 39.70964],
+                      [-105.31767, 39.71036],
+                      [-105.31651, 39.71144],
+                      [-105.31565, 39.71214],
+                      [-105.3144, 39.71322],
+                      [-105.31406, 39.71346],
+                      [-105.31379, 39.71361],
+                      [-105.31338, 39.71379],
+                      [-105.31292, 39.71395],
+                      [-105.31258, 39.71404],
+                      [-105.31224, 39.71411],
+                      [-105.3118, 39.71416],
+                      [-105.31147, 39.71418],
+                      [-105.31115, 39.71417],
+                      [-105.31074, 39.71414],
+                      [-105.30993, 39.714],
+                      [-105.29773, 39.71082],
+                      [-105.29435, 39.70995],
+                      [-105.29363, 39.70978],
+                      [-105.29247, 39.70954],
+                      [-105.29141, 39.70937],
+                      [-105.29065, 39.70928],
+                      [-105.28972, 39.7092],
+                      [-105.28503, 39.70897],
+                      [-105.28426, 39.70891],
+                      [-105.28364, 39.70881],
+                      [-105.28305, 39.70867],
+                      [-105.28246, 39.70848],
+                      [-105.27723, 39.70631],
+                      [-105.27686, 39.70618],
+                      [-105.27616, 39.70596],
+                      [-105.27535, 39.70578],
+                      [-105.27484, 39.70568],
+                      [-105.26306, 39.70392],
+                      [-105.26219, 39.70382],
+                      [-105.26179, 39.70379],
+                      [-105.26099, 39.70376],
+                      [-105.26019, 39.70378],
+                      [-105.25979, 39.70381],
+                      [-105.25888, 39.70392],
+                      [-105.25585, 39.70435],
+                      [-105.25544, 39.70439],
+                      [-105.25482, 39.70442],
+                      [-105.25431, 39.70441],
+                      [-105.25363, 39.70442],
+                      [-105.25307, 39.70431],
+                      [-105.25225, 39.70413],
+                      [-105.2514, 39.70386],
+                      [-105.25009, 39.70353],
+                      [-105.24896, 39.70336],
+                      [-105.24768, 39.70311],
+                      [-105.24634, 39.70287],
+                      [-105.24531, 39.70265],
+                      [-105.24247, 39.70181],
+                      [-105.24171, 39.70156],
+                      [-105.24124, 39.70137],
+                      [-105.24104, 39.70126],
+                      [-105.24065, 39.70101],
+                      [-105.24047, 39.70087],
+                      [-105.24007, 39.70051],
+                      [-105.23913, 39.69958],
+                      [-105.23893, 39.6994],
+                      [-105.23856, 39.69912],
+                      [-105.23816, 39.69888],
+                      [-105.23773, 39.69869],
+                      [-105.23727, 39.69853],
+                      [-105.23679, 39.69841],
+                      [-105.23627, 39.69834],
+                      [-105.23556, 39.69831],
+                      [-105.22821, 39.69818],
+                      [-105.22745, 39.69815],
+                      [-105.22714, 39.69812],
+                      [-105.22684, 39.69808],
+                      [-105.22622, 39.69794],
+                      [-105.22062, 39.69631],
+                      [-105.21988, 39.69614],
+                      [-105.21951, 39.69607],
+                      [-105.21875, 39.69598],
+                      [-105.21797, 39.69594],
+                      [-105.21553, 39.69596],
+                      [-105.21477, 39.69593],
+                      [-105.21442, 39.6959],
+                      [-105.21374, 39.69579],
+                      [-105.21188, 39.69532],
+                      [-105.21128, 39.69521],
+                      [-105.21077, 39.69517],
+                      [-105.21026, 39.69518],
+                      [-105.21, 39.6952],
+                      [-105.2095, 39.69527],
+                      [-105.20926, 39.69532],
+                      [-105.20879, 39.69546],
+                      [-105.20855, 39.69554],
+                      [-105.20835, 39.69563],
+                      [-105.20797, 39.69582],
+                      [-105.2076, 39.69604],
+                      [-105.20741, 39.69618],
+                      [-105.20716, 39.69637],
+                      [-105.2067, 39.69678],
+                      [-105.2035, 39.70003],
+                      [-105.20263, 39.70104],
+                      [-105.19982, 39.70467],
+                      [-105.19039, 39.71693],
+                      [-105.18975, 39.71769],
+                      [-105.18895, 39.71852],
+                      [-105.18821, 39.71919],
+                      [-105.18782, 39.71952],
+                      [-105.18722, 39.72],
+                      [-105.18673, 39.72034],
+                      [-105.18189, 39.72352],
+                      [-105.18145, 39.72372],
+                      [-105.18116, 39.7239],
+                      [-105.18067, 39.72419],
+                      [-105.18016, 39.72441],
+                      [-105.17945, 39.72468],
+                      [-105.17905, 39.7248],
+                      [-105.17836, 39.72498],
+                      [-105.17773, 39.72509],
+                      [-105.17689, 39.7252],
+                      [-105.17515, 39.72526],
+                      [-105.15576, 39.72528],
+                      [-105.14489, 39.72527],
+                      [-105.13746, 39.7253],
+                      [-105.13406, 39.72527],
+                      [-105.13043, 39.72529],
+                      [-105.12945, 39.72528],
+                      [-105.12641, 39.72529],
+                      [-105.12284, 39.72533],
+                      [-105.11355, 39.72536],
+                      [-105.11009, 39.72538],
+                      [-105.10203, 39.7254],
+                      [-105.08221, 39.72549],
+                      [-105.07941, 39.72549],
+                      [-105.07766, 39.72551],
+                      [-105.06007, 39.72558],
+                      [-105.05891, 39.72559],
+                      [-105.05739, 39.72564],
+                      [-105.05254, 39.72567],
+                      [-105.04856, 39.72565],
+                      [-105.04683, 39.7256],
+                      [-105.04047, 39.72561],
+                      [-105.03677, 39.72559],
+                      [-105.03375, 39.72556],
+                      [-105.03229, 39.72548],
+                      [-105.03118, 39.72544],
+                      [-105.02512, 39.72542],
+                      [-105.02361, 39.72543],
+                      [-105.02236, 39.72538],
+                      [-105.01917, 39.72518],
+                      [-105.01868, 39.72521],
+                      [-105.01771, 39.72524],
+                      [-105.01641, 39.72532],
+                      [-105.01567, 39.72532],
+                      [-105.0141, 39.72545],
+                      [-105.01152, 39.7256],
+                      [-105.01087, 39.72563],
+                      [-105.00967, 39.72564],
+                      [-105.00806, 39.72572],
+                      [-105.0077, 39.72572],
+                      [-105.00658, 39.72566],
+                      [-105.00557, 39.72563],
+                      [-105.00401, 39.72563],
+                      [-105.0036, 39.72565],
+                      [-105.00148, 39.72563],
+                      [-105.00094, 39.72565],
+                      [-105.00033, 39.7257],
+                      [-104.99944, 39.72572],
+                      [-104.99861, 39.7257],
+                      [-104.99519, 39.7257],
+                      [-104.9909, 39.72565],
+                      [-104.98624, 39.72563],
+                      [-104.98617, 39.72658],
+                      [-104.98615, 39.72909],
+                      [-104.98611, 39.73045],
+                      [-104.98613, 39.73385],
+                      [-104.98611, 39.73846],
+                      [-104.98616, 39.7392],
+                      [-104.98612, 39.73982],
+                      [-104.9861, 39.74146],
+                      [-104.98679, 39.74168],
+                      [-104.98694, 39.74168],
+                      [-104.98695, 39.74159]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "14965",
+                    "stop_name": "Lincoln St & 13th Ave",
+                    "stop_desc": "Vehicles Travelling North",
+                    "location_type": 0,
+                    "routes": ["0", "0L", "2X", "3L", "5X", "6", "10", "16", "79L", "83L", "87X", "100X", "116X", "CS", "CV", "CX", "ES", "EV", "EX", "P"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.98603, 39.73671]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "14978",
+                    "stop_name": "Lincoln St & 7th Ave",
+                    "stop_desc": "Vehicles Travelling North",
+                    "location_type": 0,
+                    "routes": ["0", "0L", "2X", "3L", "5X", "79L", "83L", "87X", "100X", "116X", "CS", "CV", "CX", "ES", "EV", "EX", "P"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.98604, 39.7276]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "18822",
+                    "stop_name": "Evergreen pnR",
+                    "stop_desc": "Vehicles Travelling North",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.33188, 39.63883]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "18902",
+                    "stop_name": "Meadow Dr & Fireweed Dr",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.32, 39.63829]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "18905",
+                    "stop_name": "El Rancho pnR",
+                    "stop_desc": "Vehicles Travelling North",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.33048, 39.69974]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19485",
+                    "stop_name": "Hwy 74 & Lewis Ridge Rd",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.35529, 39.66396]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20344",
+                    "stop_name": "Hwy 74 & Douglas Park Rd",
+                    "stop_desc": "Vehicles Travelling Northeast",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.31894, 39.63291]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20345",
+                    "stop_name": "Meadow Dr & Hwy 74",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.31599, 39.63727]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20346",
+                    "stop_name": "Meadow Dr & Cedar Cir",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.32768, 39.638]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20347",
+                    "stop_name": "Douglas Park Rd & Aspen Ln",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.32962, 39.63858]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20348",
+                    "stop_name": "Hwy 74 & Ponderosa Dr",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.33586, 39.64408]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20349",
+                    "stop_name": "Hwy 74 & Stagecoach Blvd",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.34608, 39.65337]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20350",
+                    "stop_name": "Hwy 74 & Brookline Rd",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.36071, 39.67178]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20351",
+                    "stop_name": "Hwy 74 & Kerr Gulch Rd",
+                    "stop_desc": "Vehicles Travelling North",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.33805, 39.6935]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "22325",
+                    "stop_name": "Bergen Park pnR",
+                    "stop_desc": "Vehicles Travelling North",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.36394, 39.69167]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "23395",
+                    "stop_name": "Meadow Dr & Fireweed Dr",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.32172, 39.63838]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "25358",
+                    "stop_name": "Hwy 74 & Bergen Pkwy",
+                    "stop_desc": "Vehicles Travelling North",
+                    "location_type": 0,
+                    "routes": ["ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.36496, 39.68036]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "99820",
+                    "stop_name": "Civic Center Station",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["0L", "2X", "3L", "5X", "16L", "47X", "79L", "83L", "87X", "100X", "116X", "122X", "CS", "CV", "CX", "ES", "EV", "EX", "HX", "P", "R", "RC", "RX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.98703, 39.74156]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table summary="This table shows schedules for a selection of key stops on the route for Route EX - Evergreen pnR to Civic Center Station Mon-Fri. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route EX - Evergreen pnR to Civic Center Station | Mon-Fri</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_18822" data-stop-id="18822">
+              <col class="stop-1" id="stop_id_18822" data-stop-id="18822">
+              <col class="stop-2" id="stop_id_20344" data-stop-id="20344">
+              <col class="stop-3" id="stop_id_20345" data-stop-id="20345">
+              <col class="stop-4" id="stop_id_18902" data-stop-id="18902">
+              <col class="stop-5" id="stop_id_23395" data-stop-id="23395">
+              <col class="stop-6" id="stop_id_20346" data-stop-id="20346">
+              <col class="stop-7" id="stop_id_20347" data-stop-id="20347">
+              <col class="stop-8" id="stop_id_18822" data-stop-id="18822">
+              <col class="stop-9" id="stop_id_18822" data-stop-id="18822">
+              <col class="stop-10" id="stop_id_20348" data-stop-id="20348">
+              <col class="stop-11" id="stop_id_20349" data-stop-id="20349">
+              <col class="stop-12" id="stop_id_19485" data-stop-id="19485">
+              <col class="stop-13" id="stop_id_20350" data-stop-id="20350">
+              <col class="stop-14" id="stop_id_25358" data-stop-id="25358">
+              <col class="stop-15" id="stop_id_22325" data-stop-id="22325">
+              <col class="stop-16" id="stop_id_20351" data-stop-id="20351">
+              <col class="stop-17" id="stop_id_18905" data-stop-id="18905">
+              <col class="stop-18" id="stop_id_14978" data-stop-id="14978">
+              <col class="stop-19" id="stop_id_14965" data-stop-id="14965">
+              <col class="stop-20" id="stop_id_99820" data-stop-id="99820">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Evergreen pnR (Arrival)</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Evergreen pnR (Departure)</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Hwy 74 &amp; Douglas Park Rd</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Meadow Dr &amp; Hwy 74</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Meadow Dr &amp; Fireweed Dr</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Meadow Dr &amp; Fireweed Dr</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Meadow Dr &amp; Cedar Cir</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Douglas Park Rd &amp; Aspen Ln</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Evergreen pnR (Arrival)</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Evergreen pnR (Departure)</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Hwy 74 &amp; Ponderosa Dr</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Hwy 74 &amp; Stagecoach Blvd</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Hwy 74 &amp; Lewis Ridge Rd</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Hwy 74 &amp; Brookline Rd</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Hwy 74 &amp; Bergen Pkwy</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Bergen Park pnR</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Hwy 74 &amp; Kerr Gulch Rd</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">El Rancho pnR</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Lincoln St &amp; 7th Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Lincoln St &amp; 13th Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Civic Center Station</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_6599384">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-EX|1111100|0-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">6:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:21am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:21am</span></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:24am</span><a class="symbol" href="#note-EX|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:24am</span><a class="symbol" href="#note-EX|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">6:24am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:26am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:28am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:29am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:31am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:33am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:39am</span></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:09am</span><a class="symbol" href="#note-EX|1111100|0-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:10am</span><a class="symbol" href="#note-EX|1111100|0-no-pickup">**</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:12am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6599383">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-EX|1111100|0-no-service">—</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:14am</span><a class="symbol" href="#note-EX|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">6:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:49am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:24am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:57am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:59am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:04am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:10am</span></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:44am</span><a class="symbol" href="#note-EX|1111100|0-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:45am</span><a class="symbol" href="#note-EX|1111100|0-no-pickup">**</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:47am</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div class="notes">
+            <div class="note" id="note-EX|1111100|0-no-pickup">** = No pickup available</div>
+            <div class="note" id="note-EX|1111100|0-no-dropoff">‡ = No drop-off available</div>
+            <div class="note" id="note-EX|1111100|0-no-service">— = No service at this stop</div>
+          </div>
+          <div class="included-dates">Service provided on: May 14, 2012, May 15, 2012, May 16, 2012, May 17, 2012, May 18, 2012, May 21, 2012, May 22, 2012, May 23, 2012, May 24, 2012, May 25, 2012, May 29, 2012, May 30, 2012, May 31, 2012, Jun 1, 2012, Jun 4, 2012, Jun 5, 2012, Jun 6, 2012, Jun 7, 2012, Jun 8, 2012, Jun 11, 2012, Jun 12, 2012, Jun 13, 2012, Jun 14, 2012, Jun 15, 2012, Jun 18, 2012, Jun 19, 2012, Jun 20, 2012, Jun 21, 2012, Jun 22, 2012, Jun 25, 2012, Jun 26, 2012, Jun 27, 2012, Jun 28, 2012, Jun 29, 2012, Jul 2, 2012, Jul 3, 2012, Jul 5, 2012, Jul 6, 2012, Jul 9, 2012, Jul 10, 2012, Jul 11, 2012, Jul 12, 2012, Jul 13, 2012, Jul 16, 2012, Jul 17, 2012, Jul 18, 2012, Jul 19, 2012, Jul 20, 2012, Jul 23, 2012, Jul 24, 2012, Jul 25, 2012, Jul 26, 2012, Jul 27, 2012, Jul 30, 2012, Jul 31, 2012, Aug 1, 2012, Aug 2, 2012, Aug 3, 2012, Aug 6, 2012, Aug 7, 2012, Aug 8, 2012, Aug 9, 2012, Aug 10, 2012, Aug 13, 2012, Aug 14, 2012, Aug 15, 2012, Aug 16, 2012, Aug 17, 2012</div>
+          <div class="excluded-dates">Service NOT provided provided on: May 19, 2012, May 20, 2012, May 26, 2012, May 27, 2012, May 28, 2012, Jun 2, 2012, Jun 3, 2012, Jun 9, 2012, Jun 10, 2012, Jun 16, 2012, Jun 17, 2012, Jun 23, 2012, Jun 24, 2012, Jun 30, 2012, Jul 1, 2012, Jul 4, 2012, Jul 7, 2012, Jul 8, 2012, Jul 14, 2012, Jul 15, 2012, Jul 21, 2012, Jul 22, 2012, Jul 28, 2012, Jul 29, 2012, Aug 4, 2012, Aug 5, 2012, Aug 11, 2012, Aug 12, 2012</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>

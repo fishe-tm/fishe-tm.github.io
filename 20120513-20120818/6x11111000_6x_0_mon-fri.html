@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZW5va2lwcHQiLCJhIjoiY2tub3NkZmE5MTl2dDJvcGJxMHJ1czZ3byJ9.wNAYXsX8CPy032JW0RQJMA';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Timetable generated on Mon Jul 25 2022 17:42:07 GMT-0600 (Mountain Daylight Time) using GTFS-to-HTML version 2.4.0 -->
+  <div class="timetable-page menu-type-simple">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center">
+        <div class="route-color-swatch-large mr-2 flex-none" style="background-color: #E33638; color: #FFFFFF">6X</div>
+        <div>Route 6X</div>
+      </h1>
+      <div class="effective-date text-gray-600 mb-2">Effective May 12, 2012</div>
+      <div class="timetable mb-10" id="timetable_id_6X11111000" data-day-list="Mon-Fri" data-direction-name="6X I-25/Brdway" data-timetable-id="6X|1111100|0" data-direction-id="0" data-route-id="6X">
+        <h2 class="text-xl">Route 6X - Federal Center: Building # 810 to Hwy I-25 &amp; Broadway Stn Gate D2 | monday-friday</h2>
+        <div class="map" id="map_timetable_id_6X11111000"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_6X11111000",
+              "routes": {
+                "0": {
+                  "route_id": "0",
+                  "route_short_name": "0",
+                  "route_long_name": "South Broadway",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "9": {
+                  "route_id": "9",
+                  "route_short_name": "9",
+                  "route_long_name": "West 10th Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "14": {
+                  "route_id": "14",
+                  "route_short_name": "14",
+                  "route_long_name": "West Florida Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "16": {
+                  "route_id": "16",
+                  "route_short_name": "16",
+                  "route_long_name": "West Colfax Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "17": {
+                  "route_id": "17",
+                  "route_short_name": "17",
+                  "route_long_name": "Jeffco",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "6X": {
+                  "route_id": "6X",
+                  "route_short_name": "6X",
+                  "route_long_name": "Federal Center/ I-25 & Broadway",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "GS": {
+                  "route_id": "GS",
+                  "route_short_name": "GS",
+                  "route_long_name": "Golden / Boulder",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "0L": {
+                  "route_id": "0L",
+                  "route_short_name": "0L",
+                  "route_long_name": "South Broadway Limited",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "P": {
+                  "route_id": "P",
+                  "route_short_name": "P",
+                  "route_long_name": "Parker / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "5X": {
+                  "route_id": "5X",
+                  "route_short_name": "5X",
+                  "route_long_name": "Federal Center Express",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "2X": {
+                  "route_id": "2X",
+                  "route_short_name": "2X",
+                  "route_long_name": "Morrison Express",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "AF": {
+                  "route_id": "AF",
+                  "route_short_name": "AF",
+                  "route_long_name": "Federal Center / Downtown / DIA",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/schedules/getRouteList.action?routeType=9",
+                  "route_color": "#000080",
+                  "route_text_color": "#FFFFFF"
+                },
+                "CS": {
+                  "route_id": "CS",
+                  "route_short_name": "CS",
+                  "route_long_name": "CS Pine Junction / Conifer / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "ES": {
+                  "route_id": "ES",
+                  "route_short_name": "ES",
+                  "route_long_name": "ES Evergreen / Aspen Park / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#E33638"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-105.12542, 39.71172],
+                      [-105.12546, 39.7117],
+                      [-105.12549, 39.71165],
+                      [-105.12551, 39.7116],
+                      [-105.12548, 39.71156],
+                      [-105.12288, 39.71153],
+                      [-105.1229, 39.71228],
+                      [-105.12297, 39.71326],
+                      [-105.12296, 39.71356],
+                      [-105.12292, 39.71374],
+                      [-105.12286, 39.71382],
+                      [-105.12271, 39.71395],
+                      [-105.12203, 39.71438],
+                      [-105.1219, 39.71449],
+                      [-105.12178, 39.71464],
+                      [-105.12176, 39.7147],
+                      [-105.12171, 39.7149],
+                      [-105.1217, 39.71509],
+                      [-105.12166, 39.71527],
+                      [-105.12155, 39.7154],
+                      [-105.12144, 39.71546],
+                      [-105.12015, 39.7154],
+                      [-105.11896, 39.71529],
+                      [-105.1181, 39.71526],
+                      [-105.11791, 39.71528],
+                      [-105.11775, 39.71532],
+                      [-105.1155, 39.71622],
+                      [-105.11506, 39.71637],
+                      [-105.11438, 39.71652],
+                      [-105.11379, 39.7166],
+                      [-105.1136, 39.71659],
+                      [-105.11357, 39.71679],
+                      [-105.11358, 39.71684],
+                      [-105.1136, 39.7169],
+                      [-105.11484, 39.71853],
+                      [-105.11605, 39.72021],
+                      [-105.1168, 39.72118],
+                      [-105.11724, 39.72115],
+                      [-105.11747, 39.72112],
+                      [-105.11805, 39.72101],
+                      [-105.11934, 39.72045],
+                      [-105.12102, 39.71969],
+                      [-105.12353, 39.72304],
+                      [-105.12433, 39.72357],
+                      [-105.12477, 39.7235],
+                      [-105.12491, 39.72347],
+                      [-105.12501, 39.72349],
+                      [-105.12515, 39.72344],
+                      [-105.12527, 39.72339],
+                      [-105.12577, 39.72309],
+                      [-105.12592, 39.72305],
+                      [-105.12609, 39.72301],
+                      [-105.12624, 39.723],
+                      [-105.12697, 39.72299],
+                      [-105.12701, 39.72228],
+                      [-105.12702, 39.72145],
+                      [-105.12719, 39.71893],
+                      [-105.12749, 39.71864],
+                      [-105.12938, 39.71863],
+                      [-105.1295, 39.71802],
+                      [-105.13058, 39.71801],
+                      [-105.13241, 39.71803],
+                      [-105.1323, 39.71932],
+                      [-105.13224, 39.72078],
+                      [-105.1321, 39.72279],
+                      [-105.13204, 39.72332],
+                      [-105.132, 39.72348],
+                      [-105.13175, 39.72404],
+                      [-105.13152, 39.72431],
+                      [-105.13138, 39.72443],
+                      [-105.13118, 39.72454],
+                      [-105.131, 39.7246],
+                      [-105.13045, 39.7247],
+                      [-105.13021, 39.72477],
+                      [-105.12927, 39.72492],
+                      [-105.12831, 39.725],
+                      [-105.12686, 39.72508],
+                      [-105.125, 39.72511],
+                      [-105.12426, 39.72515],
+                      [-105.12239, 39.72529],
+                      [-105.11944, 39.72532],
+                      [-105.11559, 39.72532],
+                      [-105.1122, 39.72535],
+                      [-105.10734, 39.72536],
+                      [-105.10463, 39.72534],
+                      [-105.10118, 39.72537],
+                      [-105.10021, 39.7254],
+                      [-105.09898, 39.72538],
+                      [-105.09158, 39.72544],
+                      [-105.08825, 39.72544],
+                      [-105.08543, 39.72546],
+                      [-105.08169, 39.72547],
+                      [-105.0816, 39.72545],
+                      [-105.08152, 39.72547],
+                      [-105.07727, 39.72549],
+                      [-105.07309, 39.72549],
+                      [-105.05703, 39.7256],
+                      [-105.0529, 39.72566],
+                      [-105.04947, 39.72567],
+                      [-105.04805, 39.72565],
+                      [-105.04707, 39.72561],
+                      [-105.0344, 39.72557],
+                      [-105.03357, 39.72555],
+                      [-105.03172, 39.72545],
+                      [-105.03118, 39.72544],
+                      [-105.02361, 39.72543],
+                      [-105.02236, 39.72538],
+                      [-105.01917, 39.72518],
+                      [-105.01868, 39.72521],
+                      [-105.01771, 39.72524],
+                      [-105.01641, 39.72532],
+                      [-105.01602, 39.72531],
+                      [-105.01567, 39.72532],
+                      [-105.0141, 39.72545],
+                      [-105.01152, 39.7256],
+                      [-105.01087, 39.72563],
+                      [-105.00967, 39.72564],
+                      [-105.00806, 39.72572],
+                      [-105.0077, 39.72572],
+                      [-105.00658, 39.72566],
+                      [-105.00557, 39.72563],
+                      [-105.00401, 39.72563],
+                      [-105.0036, 39.72565],
+                      [-105.00148, 39.72563],
+                      [-105.00076, 39.72566],
+                      [-105.00033, 39.7257],
+                      [-104.99944, 39.72572],
+                      [-104.99861, 39.7257],
+                      [-104.99519, 39.7257],
+                      [-104.9909, 39.72565],
+                      [-104.98743, 39.72564],
+                      [-104.98748, 39.72412],
+                      [-104.9875, 39.72095],
+                      [-104.98749, 39.71936],
+                      [-104.98752, 39.71655],
+                      [-104.98752, 39.71476],
+                      [-104.9876, 39.71023],
+                      [-104.98761, 39.70844],
+                      [-104.98761, 39.70752],
+                      [-104.98746, 39.70308],
+                      [-104.98752, 39.70213],
+                      [-104.98758, 39.7015],
+                      [-104.98758, 39.70118],
+                      [-104.98761, 39.70044],
+                      [-104.98759, 39.70024],
+                      [-104.98804, 39.70021],
+                      [-104.98838, 39.70023],
+                      [-104.98857, 39.70026],
+                      [-104.98871, 39.70032],
+                      [-104.98877, 39.70036],
+                      [-104.98891, 39.7005],
+                      [-104.98898, 39.70161],
+                      [-104.98909, 39.70176],
+                      [-104.98988, 39.70169]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "11084",
+                    "stop_name": "3rd St & W Main Ave",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["6X", "14", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.11506, 39.71892]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "11086",
+                    "stop_name": "3rd St & N Center Ave",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["6X", "14", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.11652, 39.72087]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "11622",
+                    "stop_name": "6th St & North Ave",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["6X", "14", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.12298, 39.7224]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12464",
+                    "stop_name": "S Broadway & W Alameda Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["0", "0L", "6X", "P"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.98772, 39.71067]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12685",
+                    "stop_name": "N Center Ave & 5th St",
+                    "stop_desc": "Vehicles Travelling Southwest",
+                    "location_type": 0,
+                    "routes": ["6X", "14", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.119, 39.72067]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12688",
+                    "stop_name": "N Center Ave & 6th St",
+                    "stop_desc": "Vehicles Travelling Southwest",
+                    "location_type": 0,
+                    "routes": ["6X", "14", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.12039, 39.72001]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "15679",
+                    "stop_name": "North Ave & 8th St",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["6X", "14", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.12662, 39.72302]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "21887",
+                    "stop_name": "Federal Center: Building # 810",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["6X", "14", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.12535, 39.71185]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "21888",
+                    "stop_name": "8th St & W Main Ave",
+                    "stop_desc": "Vehicles Travelling Northeast",
+                    "location_type": 0,
+                    "routes": ["6X", "14", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.12287, 39.7137]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "21889",
+                    "stop_name": "W Main Ave & 6th St",
+                    "stop_desc": "Vehicles Travelling Northeast",
+                    "location_type": 0,
+                    "routes": ["6X", "14", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.11786, 39.71519]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "26283",
+                    "stop_name": "Hwy I-25 & Broadway Stn Gate D2",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["6X"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.98955, 39.7018]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "33654",
+                    "stop_name": "Federal Center Station Gate G",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["5X", "6X"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.12992, 39.71984]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "33665",
+                    "stop_name": "Union Blvd & W 4th Ave",
+                    "stop_desc": "Vehicles Travelling North",
+                    "location_type": 0,
+                    "routes": ["2X", "5X", "6X", "9", "16", "17", "AF", "CS", "ES", "GS"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.13206, 39.72238]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table summary="This table shows schedules for a selection of key stops on the route for Route 6X - Federal Center: Building # 810 to Hwy I-25 &amp; Broadway Stn Gate D2 Mon-Fri. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 6X - Federal Center: Building # 810 to Hwy I-25 &amp; Broadway Stn Gate D2 | Mon-Fri</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_21887" data-stop-id="21887">
+              <col class="stop-1" id="stop_id_21888" data-stop-id="21888">
+              <col class="stop-2" id="stop_id_21889" data-stop-id="21889">
+              <col class="stop-3" id="stop_id_11084" data-stop-id="11084">
+              <col class="stop-4" id="stop_id_11086" data-stop-id="11086">
+              <col class="stop-5" id="stop_id_12685" data-stop-id="12685">
+              <col class="stop-6" id="stop_id_12688" data-stop-id="12688">
+              <col class="stop-7" id="stop_id_11622" data-stop-id="11622">
+              <col class="stop-8" id="stop_id_15679" data-stop-id="15679">
+              <col class="stop-9" id="stop_id_33654" data-stop-id="33654">
+              <col class="stop-10" id="stop_id_33654" data-stop-id="33654">
+              <col class="stop-11" id="stop_id_33665" data-stop-id="33665">
+              <col class="stop-12" id="stop_id_12464" data-stop-id="12464">
+              <col class="stop-13" id="stop_id_26283" data-stop-id="26283">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Federal Center: Building # 810</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">8th St &amp; W Main Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">W Main Ave &amp; 6th St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">3rd St &amp; W Main Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">3rd St &amp; N Center Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">N Center Ave &amp; 5th St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">N Center Ave &amp; 6th St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">6th St &amp; North Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">North Ave &amp; 8th St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Federal Center Station Gate G (Arrival)</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Federal Center Station Gate G (Departure)</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Union Blvd &amp; W 4th Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">S Broadway &amp; W Alameda Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Hwy I-25 &amp; Broadway Stn Gate D2</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_6595949">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">6:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:19am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:21am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6595950">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">6:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:52am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6595951">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-6X|1111100|0-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:22am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6595946">
+                <td class="stop-time pm"><span class="stop-time-text">3:51pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:27pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6595947">
+                <td class="stop-time pm"><span class="stop-time-text">4:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:37pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:58pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6595948">
+                <td class="stop-time pm"><span class="stop-time-text">5:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:42pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div class="notes">
+            <div class="note" id="note-6X|1111100|0-no-service">— = No service at this stop</div>
+          </div>
+          <div class="included-dates">Service provided on: May 14, 2012, May 15, 2012, May 16, 2012, May 17, 2012, May 18, 2012, May 21, 2012, May 22, 2012, May 23, 2012, May 24, 2012, May 25, 2012, May 29, 2012, May 30, 2012, May 31, 2012, Jun 1, 2012, Jun 4, 2012, Jun 5, 2012, Jun 6, 2012, Jun 7, 2012, Jun 8, 2012, Jun 11, 2012, Jun 12, 2012, Jun 13, 2012, Jun 14, 2012, Jun 15, 2012, Jun 18, 2012, Jun 19, 2012, Jun 20, 2012, Jun 21, 2012, Jun 22, 2012, Jun 25, 2012, Jun 26, 2012, Jun 27, 2012, Jun 28, 2012, Jun 29, 2012, Jul 2, 2012, Jul 3, 2012, Jul 5, 2012, Jul 6, 2012, Jul 9, 2012, Jul 10, 2012, Jul 11, 2012, Jul 12, 2012, Jul 13, 2012, Jul 16, 2012, Jul 17, 2012, Jul 18, 2012, Jul 19, 2012, Jul 20, 2012, Jul 23, 2012, Jul 24, 2012, Jul 25, 2012, Jul 26, 2012, Jul 27, 2012, Jul 30, 2012, Jul 31, 2012, Aug 1, 2012, Aug 2, 2012, Aug 3, 2012, Aug 6, 2012, Aug 7, 2012, Aug 8, 2012, Aug 9, 2012, Aug 10, 2012, Aug 13, 2012, Aug 14, 2012, Aug 15, 2012, Aug 16, 2012, Aug 17, 2012</div>
+          <div class="excluded-dates">Service NOT provided provided on: May 19, 2012, May 20, 2012, May 26, 2012, May 27, 2012, May 28, 2012, Jun 2, 2012, Jun 3, 2012, Jun 9, 2012, Jun 10, 2012, Jun 16, 2012, Jun 17, 2012, Jun 23, 2012, Jun 24, 2012, Jun 30, 2012, Jul 1, 2012, Jul 4, 2012, Jul 7, 2012, Jul 8, 2012, Jul 14, 2012, Jul 15, 2012, Jul 21, 2012, Jul 22, 2012, Jul 28, 2012, Jul 29, 2012, Aug 4, 2012, Aug 5, 2012, Aug 11, 2012, Aug 12, 2012</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>

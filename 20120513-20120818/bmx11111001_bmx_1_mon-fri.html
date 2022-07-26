@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZW5va2lwcHQiLCJhIjoiY2tub3NkZmE5MTl2dDJvcGJxMHJ1czZ3byJ9.wNAYXsX8CPy032JW0RQJMA';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Timetable generated on Mon Jul 25 2022 17:34:24 GMT-0600 (Mountain Daylight Time) using GTFS-to-HTML version 2.4.0 -->
+  <div class="timetable-page menu-type-simple">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center">
+        <div class="route-color-swatch-large mr-2 flex-none" style="background-color: #2F4F2F; color: #FFFFFF">BMX</div>
+        <div>Route BMX</div>
+      </h1>
+      <div class="effective-date text-gray-600 mb-2">Effective May 12, 2012</div>
+      <div class="timetable mb-10" id="timetable_id_BMX11111001" data-day-list="Mon-Fri" data-direction-name="BMX Boulder Transit Center via US36 &amp; McCaslin pnR" data-timetable-id="BMX|1111100|1" data-direction-id="1" data-route-id="BMX">
+        <h2 class="text-xl">Route BMX - 31st St &amp; Ringsby Ct to Boulder Transit Center Gate 1 | monday-friday</h2>
+        <div class="map" id="map_timetable_id_BMX11111001"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_BMX11111001",
+              "routes": {
+                "6": {
+                  "route_id": "6",
+                  "route_short_name": "6",
+                  "route_long_name": "East 6th Avenue / North Pecos",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "8": {
+                  "route_id": "8",
+                  "route_short_name": "8",
+                  "route_long_name": "North Broadway / Huron",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "32": {
+                  "route_id": "32",
+                  "route_short_name": "32",
+                  "route_long_name": "West 32nd Avenue / City Park",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "38": {
+                  "route_id": "38",
+                  "route_short_name": "38",
+                  "route_long_name": "38th Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "48": {
+                  "route_id": "48",
+                  "route_short_name": "48",
+                  "route_long_name": "East 48th Avenue / Commerce City",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "204": {
+                  "route_id": "204",
+                  "route_short_name": "204",
+                  "route_long_name": "Table Mesa / Moorhead / North 19th",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "206": {
+                  "route_id": "206",
+                  "route_short_name": "206",
+                  "route_long_name": "Pearl / Eisenhower",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "209": {
+                  "route_id": "209",
+                  "route_short_name": "209",
+                  "route_long_name": "CU / Thunderbird",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "225": {
+                  "route_id": "225",
+                  "route_short_name": "225",
+                  "route_long_name": "Boulder / Lafayette via Baseline",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "209G": {
+                  "route_id": "209G",
+                  "route_short_name": "209G",
+                  "route_long_name": "209G CU / Thunderbird",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "225E": {
+                  "route_id": "225E",
+                  "route_short_name": "225E",
+                  "route_long_name": "225E Boulder / Lafayette via Baseline",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "AB": {
+                  "route_id": "AB",
+                  "route_short_name": "AB",
+                  "route_long_name": "Boulder / DIA",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/schedules/getRouteList.action?routeType=9",
+                  "route_color": "#000080",
+                  "route_text_color": "#FFFFFF"
+                },
+                "ABA": {
+                  "route_id": "ABA",
+                  "route_short_name": "ABA",
+                  "route_long_name": "ABA Boulder / DIA",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/schedules/getRouteList.action?routeType=9",
+                  "route_color": "#000080",
+                  "route_text_color": "#FFFFFF"
+                },
+                "BMX": {
+                  "route_id": "BMX",
+                  "route_short_name": "BMX",
+                  "route_long_name": "BMX Boulder / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "BV": {
+                  "route_id": "BV",
+                  "route_short_name": "BV",
+                  "route_long_name": "BV Boulder / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "BX": {
+                  "route_id": "BX",
+                  "route_short_name": "BX",
+                  "route_long_name": "BX Boulder / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "DASH": {
+                  "route_id": "DASH",
+                  "route_short_name": "DASH",
+                  "route_long_name": "Boulder / Lafayette via Louisville",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "DD": {
+                  "route_id": "DD",
+                  "route_short_name": "DD",
+                  "route_long_name": "Boulder / Colorado Blvd",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "DM": {
+                  "route_id": "DM",
+                  "route_short_name": "DM",
+                  "route_long_name": "Boulder / Anschutz-Fitzsimons",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "GS": {
+                  "route_id": "GS",
+                  "route_short_name": "GS",
+                  "route_long_name": "Golden / Boulder",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "J": {
+                  "route_id": "J",
+                  "route_short_name": "J",
+                  "route_long_name": "Longmont / East Boulder / CU",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "SKIP": {
+                  "route_id": "SKIP",
+                  "route_short_name": "SKIP",
+                  "route_long_name": "Broadway",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "STAMPEDE": {
+                  "route_id": "STAMPEDE",
+                  "route_short_name": "STAMPEDE",
+                  "route_long_name": "CU East Campus",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "BOUND": {
+                  "route_id": "BOUND",
+                  "route_short_name": "BOUND",
+                  "route_long_name": "30th Street",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "206F": {
+                  "route_id": "206F",
+                  "route_short_name": "206F",
+                  "route_long_name": "206F Pearl / Eisenhower",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "HX": {
+                  "route_id": "HX",
+                  "route_short_name": "HX",
+                  "route_long_name": "28th Street/ Civic Center",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "S": {
+                  "route_id": "S",
+                  "route_short_name": "S",
+                  "route_long_name": "Denver / East Boulder",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "T": {
+                  "route_id": "T",
+                  "route_short_name": "T",
+                  "route_long_name": "Boulder / Greenwood Plaza",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "N": {
+                  "route_id": "N",
+                  "route_short_name": "N",
+                  "route_long_name": "Nederland / Boulder",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "BF": {
+                  "route_id": "BF",
+                  "route_short_name": "BF",
+                  "route_long_name": "BF Boulder / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "55X": {
+                  "route_id": "55X",
+                  "route_short_name": "55X",
+                  "route_long_name": "Olde Town Arvada Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "72X": {
+                  "route_id": "72X",
+                  "route_short_name": "72X",
+                  "route_long_name": "Quaker via Ward Express",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "120X": {
+                  "route_id": "120X",
+                  "route_short_name": "120X",
+                  "route_long_name": "Wagon Road / Thornton Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "L": {
+                  "route_id": "L",
+                  "route_short_name": "L",
+                  "route_long_name": "Longmont / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "RX": {
+                  "route_id": "RX",
+                  "route_short_name": "RX",
+                  "route_long_name": "RX Brighton / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "BOLT": {
+                  "route_id": "BOLT",
+                  "route_short_name": "BOLT",
+                  "route_long_name": "Boulder / Longmont",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "Y": {
+                  "route_id": "Y",
+                  "route_short_name": "Y",
+                  "route_long_name": "Lyons / Boulder",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "31X": {
+                  "route_id": "31X",
+                  "route_short_name": "31X",
+                  "route_long_name": "North Federal Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "40X": {
+                  "route_id": "40X",
+                  "route_short_name": "40X",
+                  "route_long_name": "North Colorado Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "80X": {
+                  "route_id": "80X",
+                  "route_short_name": "80X",
+                  "route_long_name": "West 80th Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "86X": {
+                  "route_id": "86X",
+                  "route_short_name": "86X",
+                  "route_long_name": "Westminster Center Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "AF": {
+                  "route_id": "AF",
+                  "route_short_name": "AF",
+                  "route_long_name": "Federal Center / Downtown / DIA",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/schedules/getRouteList.action?routeType=9",
+                  "route_color": "#000080",
+                  "route_text_color": "#FFFFFF"
+                },
+                "LNX": {
+                  "route_id": "LNX",
+                  "route_short_name": "LNX",
+                  "route_long_name": "LNX Longmont / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "LSX": {
+                  "route_id": "LSX",
+                  "route_short_name": "LSX",
+                  "route_long_name": "LSX Longmont / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "LX": {
+                  "route_id": "LX",
+                  "route_short_name": "LX",
+                  "route_long_name": "LX Longmont / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2F4F2F"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-104.99821, 39.75058],
+                      [-104.99769, 39.75097],
+                      [-104.99766, 39.75098],
+                      [-104.99763, 39.75097],
+                      [-104.99741, 39.7508],
+                      [-104.9974, 39.75077],
+                      [-104.9974, 39.75075],
+                      [-104.99806, 39.75025],
+                      [-104.99811, 39.75024],
+                      [-104.99834, 39.7504],
+                      [-104.99843, 39.75045],
+                      [-104.99864, 39.75048],
+                      [-104.99894, 39.75049],
+                      [-105.00002, 39.75122],
+                      [-104.99883, 39.75215],
+                      [-104.99638, 39.75403],
+                      [-104.99709, 39.75454],
+                      [-104.9976, 39.75486],
+                      [-104.99774, 39.75499],
+                      [-104.99776, 39.75505],
+                      [-104.99778, 39.75518],
+                      [-104.99773, 39.75531],
+                      [-104.99769, 39.75536],
+                      [-104.99739, 39.75561],
+                      [-104.99729, 39.75572],
+                      [-104.99719, 39.7559],
+                      [-104.99712, 39.75612],
+                      [-104.9971, 39.75628],
+                      [-104.99712, 39.75646],
+                      [-104.99715, 39.75659],
+                      [-104.99719, 39.75657],
+                      [-104.99729, 39.75678],
+                      [-104.99744, 39.75698],
+                      [-104.99779, 39.75728],
+                      [-104.99779, 39.75731],
+                      [-104.99872, 39.75802],
+                      [-104.99873, 39.75805],
+                      [-104.99966, 39.75873],
+                      [-105.00006, 39.75901],
+                      [-105.00069, 39.75939],
+                      [-105.0015, 39.75983],
+                      [-105.00182, 39.76007],
+                      [-105.00196, 39.7602],
+                      [-105.00219, 39.76046],
+                      [-105.00236, 39.76068],
+                      [-105.00259, 39.76109],
+                      [-105.00265, 39.76126],
+                      [-105.00281, 39.76188],
+                      [-105.00281, 39.76202],
+                      [-105.00277, 39.7622],
+                      [-105.00259, 39.76276],
+                      [-105.00241, 39.76314],
+                      [-105.00231, 39.76329],
+                      [-105.00078, 39.76522],
+                      [-105.00062, 39.76539],
+                      [-105.00008, 39.76592],
+                      [-104.99944, 39.76633],
+                      [-104.99895, 39.76659],
+                      [-104.99862, 39.76674],
+                      [-104.99481, 39.76822],
+                      [-104.99431, 39.76843],
+                      [-104.99389, 39.76864],
+                      [-104.99336, 39.76893],
+                      [-104.99277, 39.76931],
+                      [-104.99222, 39.76973],
+                      [-104.99195, 39.76997],
+                      [-104.99146, 39.77044],
+                      [-104.99123, 39.77069],
+                      [-104.99102, 39.77096],
+                      [-104.99061, 39.77151],
+                      [-104.99044, 39.77181],
+                      [-104.99013, 39.7724],
+                      [-104.98988, 39.77302],
+                      [-104.98978, 39.77333],
+                      [-104.98961, 39.77397],
+                      [-104.98954, 39.77429],
+                      [-104.98948, 39.77477],
+                      [-104.98944, 39.77529],
+                      [-104.98935, 39.78685],
+                      [-104.98934, 39.78736],
+                      [-104.9893, 39.78787],
+                      [-104.98924, 39.78839],
+                      [-104.98913, 39.78901],
+                      [-104.98769, 39.7952],
+                      [-104.98755, 39.79569],
+                      [-104.9873, 39.79647],
+                      [-104.98724, 39.79658],
+                      [-104.98705, 39.79709],
+                      [-104.98677, 39.79771],
+                      [-104.9843, 39.80253],
+                      [-104.98399, 39.80314],
+                      [-104.98371, 39.80375],
+                      [-104.9835, 39.80434],
+                      [-104.98342, 39.80463],
+                      [-104.98324, 39.80543],
+                      [-104.98316, 39.80589],
+                      [-104.98309, 39.80678],
+                      [-104.98301, 39.81531],
+                      [-104.98295, 39.81698],
+                      [-104.9829, 39.81947],
+                      [-104.98282, 39.82144],
+                      [-104.98274, 39.8226],
+                      [-104.98262, 39.8236],
+                      [-104.98245, 39.82468],
+                      [-104.98215, 39.82631],
+                      [-104.98215, 39.82654],
+                      [-104.98221, 39.8268],
+                      [-104.98232, 39.82702],
+                      [-104.98248, 39.82722],
+                      [-104.98273, 39.82741],
+                      [-104.98309, 39.82759],
+                      [-104.98333, 39.82767],
+                      [-104.98373, 39.82773],
+                      [-104.98403, 39.82773],
+                      [-104.98483, 39.82771],
+                      [-104.98787, 39.82758],
+                      [-104.9903, 39.82758],
+                      [-104.99337, 39.8276],
+                      [-104.99399, 39.82762],
+                      [-104.99486, 39.8277],
+                      [-104.99574, 39.82783],
+                      [-104.99649, 39.828],
+                      [-105.00006, 39.82902],
+                      [-105.00262, 39.8298],
+                      [-105.00622, 39.83079],
+                      [-105.00746, 39.83116],
+                      [-105.01984, 39.83473],
+                      [-105.023, 39.83565],
+                      [-105.02434, 39.83609],
+                      [-105.03218, 39.83827],
+                      [-105.03305, 39.83856],
+                      [-105.03417, 39.83899],
+                      [-105.03495, 39.83932],
+                      [-105.03531, 39.83949],
+                      [-105.03611, 39.83991],
+                      [-105.03708, 39.84046],
+                      [-105.03766, 39.84082],
+                      [-105.03799, 39.84105],
+                      [-105.03876, 39.8416],
+                      [-105.03964, 39.84232],
+                      [-105.04019, 39.84282],
+                      [-105.04905, 39.85147],
+                      [-105.05012, 39.85262],
+                      [-105.05056, 39.85313],
+                      [-105.05147, 39.85427],
+                      [-105.0521, 39.85511],
+                      [-105.05259, 39.85581],
+                      [-105.05309, 39.85659],
+                      [-105.05385, 39.85793],
+                      [-105.05432, 39.85883],
+                      [-105.05477, 39.85977],
+                      [-105.05617, 39.86284],
+                      [-105.05743, 39.86543],
+                      [-105.05804, 39.86682],
+                      [-105.05953, 39.87005],
+                      [-105.06009, 39.87116],
+                      [-105.0606, 39.87198],
+                      [-105.06096, 39.87252],
+                      [-105.06255, 39.87464],
+                      [-105.0638, 39.87634],
+                      [-105.06492, 39.87796],
+                      [-105.06795, 39.88206],
+                      [-105.06925, 39.88385],
+                      [-105.07009, 39.88493],
+                      [-105.07174, 39.88712],
+                      [-105.07291, 39.88874],
+                      [-105.07394, 39.8902],
+                      [-105.07568, 39.89255],
+                      [-105.07648, 39.89359],
+                      [-105.07671, 39.89393],
+                      [-105.07732, 39.89496],
+                      [-105.07949, 39.89877],
+                      [-105.07971, 39.8991],
+                      [-105.08044, 39.90015],
+                      [-105.08088, 39.90072],
+                      [-105.08167, 39.90183],
+                      [-105.08479, 39.90633],
+                      [-105.08849, 39.91159],
+                      [-105.08908, 39.91232],
+                      [-105.08987, 39.91318],
+                      [-105.09044, 39.91374],
+                      [-105.09131, 39.91448],
+                      [-105.09171, 39.9148],
+                      [-105.09234, 39.91526],
+                      [-105.09319, 39.91583],
+                      [-105.09398, 39.9163],
+                      [-105.09508, 39.91689],
+                      [-105.0986, 39.91852],
+                      [-105.1056, 39.9217],
+                      [-105.10806, 39.92285],
+                      [-105.10889, 39.92326],
+                      [-105.10959, 39.92364],
+                      [-105.11061, 39.92428],
+                      [-105.11165, 39.92502],
+                      [-105.11617, 39.92858],
+                      [-105.11864, 39.93048],
+                      [-105.11945, 39.93104],
+                      [-105.12037, 39.93162],
+                      [-105.12052, 39.93175],
+                      [-105.12136, 39.93225],
+                      [-105.12147, 39.9323],
+                      [-105.12156, 39.93227],
+                      [-105.12284, 39.93288],
+                      [-105.12475, 39.93372],
+                      [-105.12636, 39.93447],
+                      [-105.13022, 39.93619],
+                      [-105.13573, 39.93868],
+                      [-105.13642, 39.93903],
+                      [-105.13728, 39.93949],
+                      [-105.1377, 39.93973],
+                      [-105.14634, 39.94534],
+                      [-105.14686, 39.94568],
+                      [-105.1473, 39.946],
+                      [-105.14861, 39.94683],
+                      [-105.14948, 39.94741],
+                      [-105.15011, 39.94779],
+                      [-105.15153, 39.94873],
+                      [-105.15275, 39.94962],
+                      [-105.15394, 39.95053],
+                      [-105.15445, 39.95095],
+                      [-105.1559, 39.95205],
+                      [-105.15642, 39.95247],
+                      [-105.15949, 39.95479],
+                      [-105.1606, 39.95553],
+                      [-105.16107, 39.95588],
+                      [-105.16337, 39.95742],
+                      [-105.16425, 39.95797],
+                      [-105.16444, 39.95807],
+                      [-105.16459, 39.95813],
+                      [-105.16492, 39.95823],
+                      [-105.16556, 39.95834],
+                      [-105.166, 39.9584],
+                      [-105.16631, 39.95847],
+                      [-105.16699, 39.95879],
+                      [-105.16741, 39.95887],
+                      [-105.16775, 39.95888],
+                      [-105.16825, 39.95899],
+                      [-105.16851, 39.95908],
+                      [-105.16896, 39.95918],
+                      [-105.1814, 39.96399],
+                      [-105.18703, 39.96621],
+                      [-105.19243, 39.96832],
+                      [-105.19567, 39.96956],
+                      [-105.20088, 39.9716],
+                      [-105.2072, 39.97404],
+                      [-105.20878, 39.97469],
+                      [-105.21069, 39.97556],
+                      [-105.22162, 39.98063],
+                      [-105.22447, 39.98193],
+                      [-105.2251, 39.98223],
+                      [-105.22605, 39.98266],
+                      [-105.22835, 39.98374],
+                      [-105.23229, 39.98555],
+                      [-105.23236, 39.98568],
+                      [-105.23235, 39.98571],
+                      [-105.23311, 39.9861],
+                      [-105.23362, 39.98634],
+                      [-105.23368, 39.98642],
+                      [-105.23369, 39.98649],
+                      [-105.23361, 39.98661],
+                      [-105.2335, 39.98674],
+                      [-105.23339, 39.98681],
+                      [-105.23308, 39.98687],
+                      [-105.23295, 39.9868],
+                      [-105.23272, 39.98675],
+                      [-105.23255, 39.98679],
+                      [-105.23245, 39.98705],
+                      [-105.23303, 39.9871],
+                      [-105.2332, 39.98709],
+                      [-105.23364, 39.98702],
+                      [-105.23417, 39.98682],
+                      [-105.23544, 39.98626],
+                      [-105.23593, 39.98608],
+                      [-105.23635, 39.98597],
+                      [-105.23706, 39.98588],
+                      [-105.23844, 39.98586],
+                      [-105.2407, 39.98586],
+                      [-105.24079, 39.98583],
+                      [-105.24824, 39.98582],
+                      [-105.24883, 39.98582],
+                      [-105.24937, 39.98578],
+                      [-105.24985, 39.98581],
+                      [-105.25006, 39.98586],
+                      [-105.25063, 39.98648],
+                      [-105.25077, 39.98661],
+                      [-105.251, 39.9868],
+                      [-105.25143, 39.98711],
+                      [-105.25172, 39.98729],
+                      [-105.25203, 39.98745],
+                      [-105.25333, 39.98807],
+                      [-105.25407, 39.98841],
+                      [-105.25501, 39.98888],
+                      [-105.25545, 39.98916],
+                      [-105.25573, 39.98936],
+                      [-105.25602, 39.98961],
+                      [-105.25636, 39.98995],
+                      [-105.25667, 39.99032],
+                      [-105.25722, 39.99109],
+                      [-105.2627, 39.99888],
+                      [-105.26357, 40.00016],
+                      [-105.26489, 40.00202],
+                      [-105.26508, 40.00226],
+                      [-105.2653, 40.00249],
+                      [-105.26563, 40.00272],
+                      [-105.26582, 40.00283],
+                      [-105.26655, 40.00311],
+                      [-105.2674, 40.00339],
+                      [-105.26815, 40.00371],
+                      [-105.26951, 40.00442],
+                      [-105.26965, 40.00451],
+                      [-105.27414, 40.00702],
+                      [-105.27453, 40.00726],
+                      [-105.27467, 40.00739],
+                      [-105.27485, 40.00759],
+                      [-105.27502, 40.00779],
+                      [-105.2761, 40.00943],
+                      [-105.277, 40.01072],
+                      [-105.27742, 40.01145],
+                      [-105.278, 40.01254],
+                      [-105.27821, 40.01288],
+                      [-105.27831, 40.01311],
+                      [-105.27843, 40.01349],
+                      [-105.2785, 40.01355],
+                      [-105.27866, 40.0141],
+                      [-105.27962, 40.01687],
+                      [-105.27832, 40.01713],
+                      [-105.27657, 40.01752]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2F4F2F"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-104.98511, 39.76769],
+                      [-104.98466, 39.7673],
+                      [-104.9843, 39.76706],
+                      [-104.98368, 39.76658],
+                      [-104.98549, 39.76519],
+                      [-104.98648, 39.76439],
+                      [-104.98656, 39.76433],
+                      [-104.98665, 39.7643],
+                      [-104.98746, 39.76369],
+                      [-104.98769, 39.76346],
+                      [-104.98789, 39.76321],
+                      [-104.98798, 39.76305],
+                      [-104.98809, 39.76279],
+                      [-104.98818, 39.76248],
+                      [-104.98821, 39.7622],
+                      [-104.98819, 39.7619],
+                      [-104.98802, 39.761],
+                      [-104.98771, 39.75963],
+                      [-104.98765, 39.75956],
+                      [-104.98764, 39.75948],
+                      [-104.98947, 39.75804],
+                      [-104.99194, 39.75615],
+                      [-104.99315, 39.7552],
+                      [-104.9943, 39.75437],
+                      [-104.99513, 39.75372],
+                      [-104.99674, 39.7524],
+                      [-104.99784, 39.75157],
+                      [-104.99885, 39.75078],
+                      [-104.99853, 39.75052],
+                      [-104.99838, 39.7505],
+                      [-104.9983, 39.75051],
+                      [-104.99821, 39.75058]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2F4F2F"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-105.00002, 39.75122],
+                      [-105.00095, 39.75192],
+                      [-105.00342, 39.75387],
+                      [-105.00328, 39.75405],
+                      [-104.99988, 39.75668],
+                      [-104.9987, 39.75575],
+                      [-104.99798, 39.75626],
+                      [-104.99719, 39.75657]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2F4F2F"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-104.99715, 39.75659],
+                      [-104.99696, 39.75666],
+                      [-104.99676, 39.75676],
+                      [-104.99635, 39.75704],
+                      [-104.99529, 39.75788],
+                      [-104.99466, 39.75849],
+                      [-104.99356, 39.75934],
+                      [-104.99383, 39.75957],
+                      [-104.99408, 39.75982],
+                      [-104.99433, 39.76014],
+                      [-104.99448, 39.76038],
+                      [-104.99454, 39.76053],
+                      [-104.99465, 39.76088],
+                      [-104.99468, 39.76102],
+                      [-104.99471, 39.76139],
+                      [-104.99478, 39.76326],
+                      [-104.99486, 39.76359],
+                      [-104.99486, 39.76589],
+                      [-104.99485, 39.76643],
+                      [-104.99477, 39.76689],
+                      [-104.99475, 39.76696],
+                      [-104.99471, 39.767],
+                      [-104.9946, 39.76708],
+                      [-104.99431, 39.76712],
+                      [-104.99387, 39.76712],
+                      [-104.99342, 39.76717],
+                      [-104.99321, 39.76724],
+                      [-104.99304, 39.76735],
+                      [-104.99297, 39.76742],
+                      [-104.99285, 39.7676],
+                      [-104.99205, 39.76937],
+                      [-104.992, 39.76945],
+                      [-104.99122, 39.77027],
+                      [-104.99099, 39.77054],
+                      [-104.99075, 39.77083],
+                      [-104.99027, 39.77154],
+                      [-104.99016, 39.77192],
+                      [-104.9896, 39.7732],
+                      [-104.98944, 39.77379],
+                      [-104.9893, 39.77447],
+                      [-104.98926, 39.7748],
+                      [-104.98923, 39.7754],
+                      [-104.98923, 39.77733],
+                      [-104.98918, 39.78018],
+                      [-104.98914, 39.7852],
+                      [-104.98915, 39.78597],
+                      [-104.98914, 39.78722],
+                      [-104.9891, 39.78778],
+                      [-104.98891, 39.78907],
+                      [-104.98868, 39.79008],
+                      [-104.9886, 39.79034],
+                      [-104.9884, 39.79114],
+                      [-104.98753, 39.79492],
+                      [-104.98729, 39.79583],
+                      [-104.98705, 39.79656],
+                      [-104.98682, 39.79713],
+                      [-104.98621, 39.79836],
+                      [-104.985, 39.80072],
+                      [-104.98384, 39.80292],
+                      [-104.9834, 39.80385],
+                      [-104.98332, 39.80405],
+                      [-104.98316, 39.80459],
+                      [-104.98291, 39.80577],
+                      [-104.98285, 39.80635],
+                      [-104.98281, 39.80733],
+                      [-104.98282, 39.80874],
+                      [-104.98279, 39.81033],
+                      [-104.98278, 39.81272],
+                      [-104.98256, 39.81984],
+                      [-104.98257, 39.82],
+                      [-104.98258, 39.82163],
+                      [-104.9825, 39.82274],
+                      [-104.98242, 39.82321],
+                      [-104.98225, 39.82392],
+                      [-104.98178, 39.82559],
+                      [-104.98172, 39.82587],
+                      [-104.9817, 39.82615],
+                      [-104.98177, 39.8265],
+                      [-104.98186, 39.82674],
+                      [-104.98199, 39.82695],
+                      [-104.98219, 39.82718],
+                      [-104.98246, 39.82741],
+                      [-104.98275, 39.8276],
+                      [-104.98297, 39.8277],
+                      [-104.98338, 39.82783],
+                      [-104.98369, 39.82789],
+                      [-104.984, 39.82791],
+                      [-104.98436, 39.8279],
+                      [-104.9858, 39.82781],
+                      [-104.98652, 39.82774],
+                      [-104.98804, 39.82768],
+                      [-104.99198, 39.8277],
+                      [-104.99334, 39.82771],
+                      [-104.99434, 39.82775],
+                      [-104.99503, 39.82783],
+                      [-104.99603, 39.82801],
+                      [-104.99656, 39.82813],
+                      [-104.99777, 39.82847],
+                      [-105.0024, 39.82982],
+                      [-105.00622, 39.83086],
+                      [-105.01743, 39.83413],
+                      [-105.02187, 39.83541],
+                      [-105.02434, 39.83609]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2F4F2F"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-105.12147, 39.9323],
+                      [-105.12193, 39.93253],
+                      [-105.1223, 39.93276],
+                      [-105.12246, 39.93286],
+                      [-105.12291, 39.93319],
+                      [-105.12314, 39.93333],
+                      [-105.12403, 39.93379],
+                      [-105.12436, 39.934],
+                      [-105.12561, 39.93511],
+                      [-105.12591, 39.93532],
+                      [-105.12618, 39.93545],
+                      [-105.12674, 39.93564],
+                      [-105.12744, 39.93579],
+                      [-105.12945, 39.93617],
+                      [-105.13012, 39.93634],
+                      [-105.13077, 39.93654],
+                      [-105.13217, 39.93707]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12432",
+                    "stop_name": "Broadway & Euclid Ave",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["204", "209", "209G", "225", "225E", "AB", "ABA", "BMX", "BV", "BX", "DASH", "DD", "DM", "GS", "J", "SKIP", "STAMPEDE"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.27162, 40.00569]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12438",
+                    "stop_name": "Broadway & 27th Way",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["AB", "ABA", "BMX", "BOUND", "BV", "BX", "DASH", "DD", "DM", "GS", "J", "SKIP"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.26131, 39.99701]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12470",
+                    "stop_name": "Broadway & Arapahoe Ave",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["204", "225", "225E", "AB", "ABA", "BMX", "BV", "BX", "DASH", "DD", "GS", "SKIP"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.27894, 40.01512]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12479",
+                    "stop_name": "Broadway & Baseline Rd",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["AB", "ABA", "BMX", "BOUND", "BV", "BX", "DASH", "DD", "DM", "GS", "J", "SKIP"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.26311, 39.99958]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12512",
+                    "stop_name": "Broadway & Dartmouth Ave",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["AB", "ABA", "BMX", "BV", "BX", "DASH", "DD", "DM", "GS", "J", "SKIP"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.25552, 39.98926]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12585",
+                    "stop_name": "Broadway & Regent Dr",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["204", "209", "209G", "225", "225E", "AB", "ABA", "BMX", "BV", "BX", "DASH", "DD", "DM", "GS", "J", "SKIP"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.26857, 40.00399]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12604",
+                    "stop_name": "S Broadway & Table Mesa Dr",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["AB", "ABA", "BMX", "BV", "BX", "DASH", "DD", "DM", "GS", "J", "SKIP"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.25024, 39.98614]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "16685",
+                    "stop_name": "Table Mesa Dr & Martin Dr",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["204", "206", "206F", "AB", "ABA", "BMX", "BV", "BX", "DASH", "DD", "DM"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.23995, 39.9859]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "17891",
+                    "stop_name": "Table Mesa pnR",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["209", "209G", "AB", "ABA", "BMX", "BV", "BX", "DD", "DM", "HX", "S", "T"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.23273, 39.98672]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "17892",
+                    "stop_name": "Broadway & Pleasant St",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["204", "225", "225E", "BMX", "BV", "BX", "DASH", "SKIP"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.276, 40.00932]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "18977",
+                    "stop_name": "Boulder Transit Center Gate 1",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["BMX", "BV", "BX", "GS", "N"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.27659, 40.01724]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19732",
+                    "stop_name": "Hwy 36 & McCaslin pnR",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["AB", "ABA", "BMX", "BV", "DD", "DM", "HX", "S", "T"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.16735, 39.95894]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "22017",
+                    "stop_name": "31st St & Ringsby Ct",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["48", "BF", "BMX", "BV", "DD"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.98619, 39.76842]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "23956",
+                    "stop_name": "Park Ave W & Delgany St",
+                    "stop_desc": "Vehicles Travelling Northwest",
+                    "location_type": 0,
+                    "routes": ["8", "38", "55X", "72X", "120X", "BMX", "BV", "BX", "L", "RX", "S"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.9939, 39.75969]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "25924",
+                    "stop_name": "Wewatta St & 21st St",
+                    "stop_desc": "Vehicles Travelling North",
+                    "location_type": 0,
+                    "routes": ["55X", "72X", "120X", "BMX", "BV", "BX", "L", "S"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.99655, 39.75684]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "26100",
+                    "stop_name": "Boulder Transit Center Gate 2",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["AB", "ABA", "BMX", "BOLT", "BV", "BX", "GS", "Y"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.27656, 40.01711]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "33400",
+                    "stop_name": "Boulder Transit Center (AR)",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["AB", "ABA", "BMX", "BOLT", "BV", "BX", "DD", "DM", "GS", "N", "Y"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.27664, 40.01737]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "33718",
+                    "stop_name": "Chestnut Pl & 17th St",
+                    "stop_desc": "Vehicles Travelling Northeast",
+                    "location_type": 0,
+                    "routes": ["6", "55X", "72X", "120X", "BMX", "BV", "BX", "L", "S"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-105.0016, 39.75529]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "99803",
+                    "stop_name": "Market Street Station Gate 3",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["BMX", "BV", "BX", "L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.99791, 39.75077]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "99811",
+                    "stop_name": "Market Street Station (LV)",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["31X", "32", "40X", "55X", "72X", "80X", "86X", "120X", "AF", "BF", "BMX", "BV", "BX", "L", "LNX", "LSX", "LX", "S"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.99854, 39.75051]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "99901",
+                    "stop_name": "Blake St & 21st St",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["31X", "72X", "86X", "BF", "BMX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.99273, 39.75572]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table summary="This table shows schedules for a selection of key stops on the route for Route BMX - 31st St &amp; Ringsby Ct to Boulder Transit Center Gate 1 Mon-Fri. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route BMX - 31st St &amp; Ringsby Ct to Boulder Transit Center Gate 1 | Mon-Fri</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_22017" data-stop-id="22017">
+              <col class="stop-1" id="stop_id_99901" data-stop-id="99901">
+              <col class="stop-2" id="stop_id_99803" data-stop-id="99803">
+              <col class="stop-3" id="stop_id_99811" data-stop-id="99811">
+              <col class="stop-4" id="stop_id_33718" data-stop-id="33718">
+              <col class="stop-5" id="stop_id_25924" data-stop-id="25924">
+              <col class="stop-6" id="stop_id_23956" data-stop-id="23956">
+              <col class="stop-7" id="stop_id_19732" data-stop-id="19732">
+              <col class="stop-8" id="stop_id_17891" data-stop-id="17891">
+              <col class="stop-9" id="stop_id_16685" data-stop-id="16685">
+              <col class="stop-10" id="stop_id_12604" data-stop-id="12604">
+              <col class="stop-11" id="stop_id_12512" data-stop-id="12512">
+              <col class="stop-12" id="stop_id_12438" data-stop-id="12438">
+              <col class="stop-13" id="stop_id_12479" data-stop-id="12479">
+              <col class="stop-14" id="stop_id_12585" data-stop-id="12585">
+              <col class="stop-15" id="stop_id_12432" data-stop-id="12432">
+              <col class="stop-16" id="stop_id_17892" data-stop-id="17892">
+              <col class="stop-17" id="stop_id_12470" data-stop-id="12470">
+              <col class="stop-18" id="stop_id_33400" data-stop-id="33400">
+              <col class="stop-19" id="stop_id_26100" data-stop-id="26100">
+              <col class="stop-20" id="stop_id_18977" data-stop-id="18977">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">31st St &amp; Ringsby Ct</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Blake St &amp; 21st St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Market Street Station Gate 3</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Market Street Station (LV)</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Chestnut Pl &amp; 17th St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Wewatta St &amp; 21st St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling North</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Park Ave W &amp; Delgany St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Hwy 36 &amp; McCaslin pnR</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Table Mesa pnR</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Table Mesa Dr &amp; Martin Dr</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">S Broadway &amp; Table Mesa Dr</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Broadway &amp; Dartmouth Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Broadway &amp; 27th Way</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Broadway &amp; Baseline Rd</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Broadway &amp; Regent Dr</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Broadway &amp; Euclid Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Broadway &amp; Pleasant St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Broadway &amp; Arapahoe Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Boulder Transit Center (AR)</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Boulder Transit Center Gate 2</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="4.76%">
+                  <div class="stop-name">Boulder Transit Center Gate 1</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_6598502">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">6:53am</span></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:56am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:56am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:56am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:24am</span></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:30am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:31am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:33am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:34am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:37am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:38am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:40am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:42am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:44am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:47am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:49am</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598529">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:08am</span></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:11am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:11am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:11am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:39am</span></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:45am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:46am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:48am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:49am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:52am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:53am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:55am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:57am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">7:59am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:02am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am"><span class="stop-time-text">8:04am</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598531">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:23am</span></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:26am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:26am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:27am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:58am</span></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:05am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:06am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:08am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:09am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:12am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:13am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:15am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:17am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:19am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:22am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am"><span class="stop-time-text">8:24am</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598471">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:38am</span></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:41am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:41am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:42am</span><a class="symbol" href="#note-BMX|1111100|1-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">8:13am</span></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:20am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:21am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:23am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:24am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:27am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:28am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:30am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:32am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:34am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">8:37am</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time am"><span class="stop-time-text">8:39am</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598532">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:00pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:25pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:32pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:34pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:35pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:41pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:42pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">12:46pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:48pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598519">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:00pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:25pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:32pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:34pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:35pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:41pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:42pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">1:46pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:48pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598497">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:00pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:25pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:32pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:34pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:35pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:41pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:42pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:46pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:48pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598525">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:30pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:55pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:01pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:02pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:04pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:05pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:08pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:08pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:11pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:12pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:13pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:16pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:18pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598476">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:00pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:25pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:32pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:34pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:35pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:41pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:42pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:46pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:48pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598459">
+                <td class="stop-time pm"><span class="stop-time-text">3:10pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:25pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:50pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:56pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:57pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">3:59pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:00pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:03pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:03pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:06pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:07pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:08pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:11pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:13pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598523">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:40pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:05pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:11pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:12pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:14pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:15pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:18pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:18pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:21pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:22pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:23pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:26pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:28pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598484">
+                <td class="stop-time pm"><span class="stop-time-text">3:40pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:55pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:20pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:26pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:27pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:29pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:30pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:33pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:33pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:36pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:37pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:41pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:43pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598503">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:05pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:30pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:36pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:37pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:39pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:40pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:46pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:47pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:48pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:51pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:53pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598538">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:20pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:46pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:53pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:54pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:57pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">4:58pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:01pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:01pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:04pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:05pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:07pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:10pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:12pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598540">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:30pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:56pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:03pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:04pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:07pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:08pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:11pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:11pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:14pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:15pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:17pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:20pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:22pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598496">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:40pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:06pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:13pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:14pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:17pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:18pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:21pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:21pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:24pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:25pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:27pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:30pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:32pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598461">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:50pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:16pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:23pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:24pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:27pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:28pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:34pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:35pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:37pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:40pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:42pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598447">
+                <td class="stop-time pm"><span class="stop-time-text">4:44pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:59pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:25pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:32pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:33pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:36pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:37pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:40pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:40pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:44pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:46pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:49pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:51pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598448">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:07pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:33pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:40pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:41pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:44pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:45pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:48pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:48pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:51pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:52pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:54pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:57pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:59pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598506">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:15pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:41pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:48pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:49pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:52pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:53pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:56pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:56pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:59pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:00pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:02pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:05pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:07pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598450">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:22pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:48pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:55pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:56pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">5:59pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:00pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:03pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:03pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:06pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:07pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:09pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:12pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:14pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598451">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:29pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:55pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:02pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:03pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:06pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:07pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:10pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:10pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:13pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:14pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:16pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:19pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:21pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598493">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:36pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:02pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:09pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:10pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:13pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:14pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:17pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:17pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:20pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:21pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:23pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:26pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:28pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598507">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:43pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:09pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:16pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:17pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:20pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:21pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:24pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:24pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:27pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:28pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:30pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:33pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:35pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598528">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:50pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:16pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:23pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:24pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:27pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:28pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:34pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:35pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:37pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:40pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:42pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598504">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:57pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:22pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:28pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:29pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:32pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:35pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:35pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:39pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:40pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:45pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598467">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:05pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:30pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:36pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:37pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:39pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:40pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:43pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:46pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:47pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:48pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:51pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:53pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598480">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:13pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:38pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:44pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:45pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:47pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:48pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:51pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:51pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:54pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:55pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:56pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:59pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:01pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598481">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:25pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:56pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:57pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">6:59pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:00pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:03pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:03pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:06pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:07pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:08pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:11pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:13pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598483">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:55pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:20pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:26pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:27pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:29pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:30pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:33pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:33pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:36pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:37pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:41pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:43pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598527">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:07pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:32pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:38pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:39pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:41pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:42pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:45pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:45pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:48pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:49pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:50pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">7:53pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:55pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6598516">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">8:00pm</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">8:25pm</span></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:31pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:32pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:34pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:35pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:37pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:37pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:40pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:41pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:42pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">8:44pm</span><a class="symbol" href="#note-BMX|1111100|1-no-pickup">**</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-BMX|1111100|1-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">8:46pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div class="notes">
+            <div class="note" id="note-BMX|1111100|1-no-pickup">** = No pickup available</div>
+            <div class="note" id="note-BMX|1111100|1-no-dropoff">‡ = No drop-off available</div>
+            <div class="note" id="note-BMX|1111100|1-no-service">— = No service at this stop</div>
+          </div>
+          <div class="included-dates">Service provided on: May 14, 2012, May 15, 2012, May 16, 2012, May 17, 2012, May 18, 2012, May 21, 2012, May 22, 2012, May 23, 2012, May 24, 2012, May 25, 2012, May 29, 2012, May 30, 2012, May 31, 2012, Jun 1, 2012, Jun 4, 2012, Jun 5, 2012, Jun 6, 2012, Jun 7, 2012, Jun 8, 2012, Jun 11, 2012, Jun 12, 2012, Jun 13, 2012, Jun 14, 2012, Jun 15, 2012, Jun 18, 2012, Jun 19, 2012, Jun 20, 2012, Jun 21, 2012, Jun 22, 2012, Jun 25, 2012, Jun 26, 2012, Jun 27, 2012, Jun 28, 2012, Jun 29, 2012, Jul 2, 2012, Jul 3, 2012, Jul 5, 2012, Jul 6, 2012, Jul 9, 2012, Jul 10, 2012, Jul 11, 2012, Jul 12, 2012, Jul 13, 2012, Jul 16, 2012, Jul 17, 2012, Jul 18, 2012, Jul 19, 2012, Jul 20, 2012, Jul 23, 2012, Jul 24, 2012, Jul 25, 2012, Jul 26, 2012, Jul 27, 2012, Jul 30, 2012, Jul 31, 2012, Aug 1, 2012, Aug 2, 2012, Aug 3, 2012, Aug 6, 2012, Aug 7, 2012, Aug 8, 2012, Aug 9, 2012, Aug 10, 2012, Aug 13, 2012, Aug 14, 2012, Aug 15, 2012, Aug 16, 2012, Aug 17, 2012</div>
+          <div class="excluded-dates">Service NOT provided provided on: May 19, 2012, May 20, 2012, May 26, 2012, May 27, 2012, May 28, 2012, Jun 2, 2012, Jun 3, 2012, Jun 9, 2012, Jun 10, 2012, Jun 16, 2012, Jun 17, 2012, Jun 23, 2012, Jun 24, 2012, Jun 30, 2012, Jul 1, 2012, Jul 4, 2012, Jul 7, 2012, Jul 8, 2012, Jul 14, 2012, Jul 15, 2012, Jul 21, 2012, Jul 22, 2012, Jul 28, 2012, Jul 29, 2012, Aug 4, 2012, Aug 5, 2012, Aug 11, 2012, Aug 12, 2012</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>

@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZW5va2lwcHQiLCJhIjoiY2tub3NkZmE5MTl2dDJvcGJxMHJ1czZ3byJ9.wNAYXsX8CPy032JW0RQJMA';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Timetable generated on Mon Jul 25 2022 17:39:27 GMT-0600 (Mountain Daylight Time) using GTFS-to-HTML version 2.4.0 -->
+  <div class="timetable-page menu-type-simple">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center">
+        <div class="route-color-swatch-large mr-2 flex-none" style="background-color: #0099CC; color: #FFFFFF">79L</div>
+        <div>Route 79L</div>
+      </h1>
+      <div class="effective-date text-gray-600 mb-2">Effective May 12, 2012</div>
+      <div class="timetable mb-10" id="timetable_id_79L11111000" data-day-list="Mon-Fri" data-direction-name="79L Nine Mile S Quebec Wy" data-timetable-id="79L|1111100|0" data-direction-id="0" data-route-id="79L">
+        <h2 class="text-xl">Route 79L - Civic Center Station Gate 6 to Nine Mile Station Gate F | monday-friday</h2>
+        <div class="map" id="map_timetable_id_79L11111000"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_79L11111000",
+              "routes": {
+                "0": {
+                  "route_id": "0",
+                  "route_short_name": "0",
+                  "route_long_name": "South Broadway",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "1": {
+                  "route_id": "1",
+                  "route_short_name": "1",
+                  "route_long_name": "West 1st Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "3": {
+                  "route_id": "3",
+                  "route_short_name": "3",
+                  "route_long_name": "Alameda Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "11": {
+                  "route_id": "11",
+                  "route_short_name": "11",
+                  "route_long_name": "Mississippi Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "16": {
+                  "route_id": "16",
+                  "route_short_name": "16",
+                  "route_long_name": "West Colfax Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "21": {
+                  "route_id": "21",
+                  "route_short_name": "21",
+                  "route_long_name": "Evans Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "35": {
+                  "route_id": "35",
+                  "route_short_name": "35",
+                  "route_long_name": "Hampden Avenue",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "73": {
+                  "route_id": "73",
+                  "route_short_name": "73",
+                  "route_long_name": "Quebec Street",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "105": {
+                  "route_id": "105",
+                  "route_short_name": "105",
+                  "route_long_name": "Havana Street",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "3L": {
+                  "route_id": "3L",
+                  "route_short_name": "3L",
+                  "route_long_name": "East Alameda Limited",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "79L": {
+                  "route_id": "79L",
+                  "route_short_name": "79L",
+                  "route_long_name": "Cherry Creek / Dayton Limited",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "83L": {
+                  "route_id": "83L",
+                  "route_short_name": "83L",
+                  "route_long_name": "Cherry Creek / Parker Rd Limited",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "0L": {
+                  "route_id": "0L",
+                  "route_short_name": "0L",
+                  "route_long_name": "South Broadway Limited",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#0099CC",
+                  "route_text_color": "#FFFFFF"
+                },
+                "2X": {
+                  "route_id": "2X",
+                  "route_short_name": "2X",
+                  "route_long_name": "Morrison Express",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "5X": {
+                  "route_id": "5X",
+                  "route_short_name": "5X",
+                  "route_long_name": "Federal Center Express",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "87X": {
+                  "route_id": "87X",
+                  "route_short_name": "87X",
+                  "route_long_name": "South Wadsworth Express",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "100X": {
+                  "route_id": "100X",
+                  "route_short_name": "100X",
+                  "route_long_name": "South Kipling Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "116X": {
+                  "route_id": "116X",
+                  "route_short_name": "116X",
+                  "route_long_name": "South Simms Express",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#E33638",
+                  "route_text_color": "#FFFFFF"
+                },
+                "CS": {
+                  "route_id": "CS",
+                  "route_short_name": "CS",
+                  "route_long_name": "CS Pine Junction / Conifer / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "CV": {
+                  "route_id": "CV",
+                  "route_short_name": "CV",
+                  "route_long_name": "CV Pine Junction / Conifer / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "CX": {
+                  "route_id": "CX",
+                  "route_short_name": "CX",
+                  "route_long_name": "CX Pine Junction / Conifer / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "ES": {
+                  "route_id": "ES",
+                  "route_short_name": "ES",
+                  "route_long_name": "ES Evergreen / Aspen Park / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "EV": {
+                  "route_id": "EV",
+                  "route_short_name": "EV",
+                  "route_long_name": "EV Evergreen / Aspen Park / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "EX": {
+                  "route_id": "EX",
+                  "route_short_name": "EX",
+                  "route_long_name": "EX Evergreen / Aspen Park / Denver",
+                  "route_desc": "This Route Travels Eastbound & Westbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                },
+                "P": {
+                  "route_id": "P",
+                  "route_short_name": "P",
+                  "route_long_name": "Parker / Denver",
+                  "route_desc": "This Route Travels Northbound & Southbound",
+                  "route_type": 3,
+                  "route_url": "http://www3.rtd-denver.com/",
+                  "route_color": "#2F4F2F",
+                  "route_text_color": "#FFFFFF"
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#0099CC"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-104.98612, 39.74014],
+                      [-104.9861, 39.74146],
+                      [-104.98679, 39.74168],
+                      [-104.98694, 39.74168],
+                      [-104.98695, 39.74155],
+                      [-104.9869, 39.74147],
+                      [-104.98678, 39.74133],
+                      [-104.98629, 39.74094],
+                      [-104.98622, 39.74085],
+                      [-104.98622, 39.74071],
+                      [-104.98625, 39.74061],
+                      [-104.98633, 39.74057],
+                      [-104.98736, 39.74059],
+                      [-104.98739, 39.74047],
+                      [-104.98739, 39.74014],
+                      [-104.98742, 39.74],
+                      [-104.9874, 39.73846],
+                      [-104.98747, 39.73682],
+                      [-104.98742, 39.73529],
+                      [-104.98744, 39.73383],
+                      [-104.98745, 39.73045],
+                      [-104.9875, 39.72564],
+                      [-104.98599, 39.72563],
+                      [-104.985, 39.72461],
+                      [-104.98463, 39.72412],
+                      [-104.98417, 39.72376],
+                      [-104.98355, 39.72322],
+                      [-104.98259, 39.72258],
+                      [-104.98027, 39.72112],
+                      [-104.97989, 39.72091],
+                      [-104.97801, 39.71977],
+                      [-104.97756, 39.71944],
+                      [-104.97684, 39.71912],
+                      [-104.97641, 39.71897],
+                      [-104.97416, 39.7184],
+                      [-104.97394, 39.71842],
+                      [-104.97349, 39.71825],
+                      [-104.97325, 39.71818],
+                      [-104.97201, 39.71818],
+                      [-104.97174, 39.71823],
+                      [-104.97093, 39.71817],
+                      [-104.97056, 39.71817],
+                      [-104.96517, 39.71816],
+                      [-104.95921, 39.71818],
+                      [-104.95851, 39.7181],
+                      [-104.95749, 39.71803],
+                      [-104.95219, 39.71806],
+                      [-104.95179, 39.71803],
+                      [-104.95123, 39.71795],
+                      [-104.95076, 39.7178],
+                      [-104.95038, 39.71762],
+                      [-104.95019, 39.71747],
+                      [-104.95008, 39.71734],
+                      [-104.95, 39.71717],
+                      [-104.94995, 39.71696],
+                      [-104.94997, 39.71626],
+                      [-104.94996, 39.71425],
+                      [-104.94993, 39.71409],
+                      [-104.94978, 39.71378],
+                      [-104.94958, 39.71354],
+                      [-104.94753, 39.71182],
+                      [-104.94733, 39.71169],
+                      [-104.94703, 39.71156],
+                      [-104.94674, 39.71149],
+                      [-104.94646, 39.71146],
+                      [-104.94378, 39.71146],
+                      [-104.94258, 39.71149],
+                      [-104.94136, 39.71146],
+                      [-104.94083, 39.71148],
+                      [-104.94065, 39.71144],
+                      [-104.94031, 39.7114],
+                      [-104.93902, 39.71141],
+                      [-104.93759, 39.71136],
+                      [-104.93743, 39.71133],
+                      [-104.93687, 39.71126],
+                      [-104.9363, 39.71114],
+                      [-104.93581, 39.71071],
+                      [-104.93552, 39.71052],
+                      [-104.93514, 39.71033],
+                      [-104.93211, 39.70928],
+                      [-104.93113, 39.70899],
+                      [-104.93015, 39.70873],
+                      [-104.92795, 39.70827],
+                      [-104.92696, 39.70813],
+                      [-104.92466, 39.70769],
+                      [-104.92348, 39.7075],
+                      [-104.92148, 39.70713],
+                      [-104.9211, 39.70704],
+                      [-104.92059, 39.70687],
+                      [-104.91984, 39.70651],
+                      [-104.91293, 39.70291],
+                      [-104.91276, 39.70281],
+                      [-104.91222, 39.70242],
+                      [-104.91086, 39.70129],
+                      [-104.91069, 39.70116],
+                      [-104.91022, 39.70091],
+                      [-104.90959, 39.70066],
+                      [-104.90701, 39.69981],
+                      [-104.90391, 39.69867],
+                      [-104.90362, 39.69848],
+                      [-104.90359, 39.69714],
+                      [-104.90362, 39.69648],
+                      [-104.9036, 39.69553],
+                      [-104.90358, 39.69257],
+                      [-104.9036, 39.68936],
+                      [-104.89887, 39.68936],
+                      [-104.89674, 39.68934],
+                      [-104.895, 39.68744],
+                      [-104.89356, 39.68591],
+                      [-104.89337, 39.68567],
+                      [-104.89255, 39.68483],
+                      [-104.89234, 39.68466],
+                      [-104.88968, 39.68296],
+                      [-104.88894, 39.68242],
+                      [-104.88829, 39.68205],
+                      [-104.88809, 39.68195],
+                      [-104.88766, 39.68182],
+                      [-104.88718, 39.68169],
+                      [-104.88686, 39.68156],
+                      [-104.88658, 39.6814],
+                      [-104.88641, 39.68124],
+                      [-104.88626, 39.68104],
+                      [-104.88579, 39.68025],
+                      [-104.885, 39.67889],
+                      [-104.88476, 39.67846],
+                      [-104.88466, 39.67824],
+                      [-104.88462, 39.67799],
+                      [-104.88456, 39.67703],
+                      [-104.88458, 39.67481],
+                      [-104.88459, 39.6747],
+                      [-104.88336, 39.67471],
+                      [-104.87891, 39.6747],
+                      [-104.87545, 39.6747],
+                      [-104.8753, 39.67475],
+                      [-104.87526, 39.67352],
+                      [-104.87526, 39.67126],
+                      [-104.87524, 39.67108],
+                      [-104.87519, 39.67092],
+                      [-104.87513, 39.67079],
+                      [-104.87504, 39.67066],
+                      [-104.8749, 39.67052],
+                      [-104.87465, 39.67035],
+                      [-104.87424, 39.67016],
+                      [-104.87392, 39.66996],
+                      [-104.87381, 39.66985],
+                      [-104.87364, 39.66963],
+                      [-104.87353, 39.66939],
+                      [-104.87347, 39.66922],
+                      [-104.87342, 39.66888],
+                      [-104.87345, 39.66871],
+                      [-104.87366, 39.66776],
+                      [-104.87368, 39.66754],
+                      [-104.87367, 39.66738],
+                      [-104.8736, 39.6672],
+                      [-104.87349, 39.66706],
+                      [-104.8733, 39.66695],
+                      [-104.87292, 39.66682],
+                      [-104.87226, 39.66662],
+                      [-104.87211, 39.66658],
+                      [-104.87196, 39.66657],
+                      [-104.87179, 39.66659],
+                      [-104.87165, 39.66663],
+                      [-104.87152, 39.6667],
+                      [-104.87103, 39.66713],
+                      [-104.87065, 39.66736],
+                      [-104.87026, 39.66747],
+                      [-104.86983, 39.66749],
+                      [-104.86812, 39.66748],
+                      [-104.86613, 39.66751],
+                      [-104.86622, 39.66328],
+                      [-104.86629, 39.66174],
+                      [-104.86628, 39.66135],
+                      [-104.86634, 39.66035],
+                      [-104.86584, 39.66023],
+                      [-104.86548, 39.66019],
+                      [-104.8623, 39.66022],
+                      [-104.85666, 39.66022],
+                      [-104.85637, 39.66024],
+                      [-104.85608, 39.6603],
+                      [-104.8559, 39.66036],
+                      [-104.85568, 39.66048],
+                      [-104.85552, 39.66053],
+                      [-104.85535, 39.66055],
+                      [-104.85505, 39.66045],
+                      [-104.85445, 39.66032],
+                      [-104.85422, 39.66023],
+                      [-104.85366, 39.66006],
+                      [-104.85309, 39.65993],
+                      [-104.85228, 39.65978],
+                      [-104.85052, 39.65951],
+                      [-104.84946, 39.65928],
+                      [-104.84775, 39.65901],
+                      [-104.84788, 39.65846],
+                      [-104.84802, 39.65802],
+                      [-104.84806, 39.65786],
+                      [-104.84807, 39.65773],
+                      [-104.84805, 39.65751],
+                      [-104.84801, 39.6574],
+                      [-104.84789, 39.65727],
+                      [-104.84773, 39.65717],
+                      [-104.84749, 39.65714],
+                      [-104.84738, 39.65715],
+                      [-104.84725, 39.65719],
+                      [-104.84702, 39.65732],
+                      [-104.84658, 39.65745],
+                      [-104.84559, 39.65794],
+                      [-104.84559, 39.65802],
+                      [-104.84563, 39.65807],
+                      [-104.84567, 39.65808],
+                      [-104.84574, 39.65809],
+                      [-104.846, 39.65799]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "10413",
+                    "stop_name": "1st Ave & Fillmore Plaza",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["1", "3", "3L", "79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.95366, 39.71798]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "10448",
+                    "stop_name": "E 1st Ave & Lafayette St",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["1", "3L", "79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.9703, 39.71814]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "10480",
+                    "stop_name": "E 1st Ave & University Blvd",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["1", "3", "3L", "79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.95805, 39.718]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "11974",
+                    "stop_name": "E Alameda Ave & S Colorado Blvd",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["3", "3L", "79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.93934, 39.71138]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12427",
+                    "stop_name": "Broadway & W 13th Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["0", "0L", "2X", "3L", "5X", "16", "79L", "83L", "87X", "100X", "116X", "CS", "CV", "CX", "ES", "EV", "EX", "P"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.98754, 39.73637]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "12463",
+                    "stop_name": "Broadway & W 9th Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["0", "2X", "3L", "5X", "79L", "83L", "87X", "100X", "116X", "CS", "CV", "CX", "ES", "EV", "EX"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.98754, 39.72971]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "13276",
+                    "stop_name": "Dartmouth Ave & E Bethany Dr",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["35", "79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.86401, 39.66016]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "13279",
+                    "stop_name": "Dartmouth Ave & S Kenton St",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["35", "79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.85859, 39.66018]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "14237",
+                    "stop_name": "S Havana St & Yale Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["79L", "105"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.86638, 39.66308]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "14286",
+                    "stop_name": "S Havana St & Yale Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["79L", "105"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.8663, 39.66721]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "14523",
+                    "stop_name": "Iliff Ave & S Dayton St",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["21", "79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.87933, 39.67468]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "14558",
+                    "stop_name": "Iliff Ave & S Yosemite St",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["21", "79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.88428, 39.67468]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "15772",
+                    "stop_name": "S Parker Rd & Dartmouth Ave",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["35", "79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.85471, 39.66032]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "15774",
+                    "stop_name": "S Parker Rd & S Peoria St",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["35", "79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.85041, 39.65937]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "16178",
+                    "stop_name": "S Quebec St & Leetsdale Dr",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["11", "73", "79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.90366, 39.69785]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "18865",
+                    "stop_name": "Leetsdale Dr & S Forest St",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.92641, 39.70789]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19486",
+                    "stop_name": "S Quebec St & Mississippi Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["73", "79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.90364, 39.69532]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19487",
+                    "stop_name": "S Quebec St & Arkansas Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["73", "79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.90365, 39.6916]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19488",
+                    "stop_name": "Florida Ave & S Quebec St",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.90306, 39.68928]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19489",
+                    "stop_name": "S Quebec Way & Florida Ave",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.89642, 39.68887]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19490",
+                    "stop_name": "S Quebec Way & Iowa Ave",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.89484, 39.68713]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19491",
+                    "stop_name": "S Quebec Way & Colorado Ave",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.89216, 39.68443]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19492",
+                    "stop_name": "S Quebec Way & Colorado Ave",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.8895, 39.68272]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19493",
+                    "stop_name": "S Yosemite St & Warren Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.88466, 39.67677]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19504",
+                    "stop_name": "Leetsdale Dr & S Oneida St",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.90784, 39.69997]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19842",
+                    "stop_name": "Florida Ave & S Syracuse St",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.8974, 39.68931]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19921",
+                    "stop_name": "Leetsdale Dr & S Monaco Pkwy",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.91207, 39.70218]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20394",
+                    "stop_name": "Leetsdale Dr & Exposition Ave",
+                    "stop_desc": "Vehicles Travelling Southwest",
+                    "location_type": 0,
+                    "routes": ["79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.91529, 39.70406]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20876",
+                    "stop_name": "S Dayton Way & Iliff Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.87539, 39.67423]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20877",
+                    "stop_name": "S Dayton Way & Harvard Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.87536, 39.67095]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20878",
+                    "stop_name": "S Dayton Way & Vassar Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.87365, 39.6683]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20879",
+                    "stop_name": "Yale Ave & S Elmira St",
+                    "stop_desc": "Vehicles Travelling Northeast",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.87119, 39.66689]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20880",
+                    "stop_name": "Yale Ave & S Havana St",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.8677, 39.66746]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "21386",
+                    "stop_name": "S Quebec Way & S Xenia Way",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.88599, 39.68044]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "21419",
+                    "stop_name": "Leetsdale Dr & S Holly St",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.92181, 39.70713]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "21665",
+                    "stop_name": "Leetsdale Dr & S Cherry St",
+                    "stop_desc": "Vehicles Travelling Southeast",
+                    "location_type": 0,
+                    "routes": ["79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.93287, 39.70944]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "21849",
+                    "stop_name": "S Steele St & Ellsworth Ave",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["1", "3L", "79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.95, 39.71585]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "26196",
+                    "stop_name": "Nine Mile Station Gate F",
+                    "stop_desc": "Vehicles Travelling West",
+                    "location_type": 0,
+                    "routes": ["79L", "83L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.84611, 39.65798]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "33101",
+                    "stop_name": "Quebec Wy & Xenia Wy",
+                    "stop_desc": "Vehicles Travelling East",
+                    "location_type": 0,
+                    "routes": ["79L"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.88766, 39.68176]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "99826",
+                    "stop_name": "Civic Center Station Gate 6",
+                    "stop_desc": "Vehicles Travelling South",
+                    "location_type": 0,
+                    "routes": ["3L", "79L", "83L", "100X"],
+                    "agency_name": "Regional Transportation District"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.98642, 39.74066]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table summary="This table shows schedules for a selection of key stops on the route for Route 79L - Civic Center Station Gate 6 to Nine Mile Station Gate F Mon-Fri. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 79L - Civic Center Station Gate 6 to Nine Mile Station Gate F | Mon-Fri</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_99826" data-stop-id="99826">
+              <col class="stop-1" id="stop_id_12427" data-stop-id="12427">
+              <col class="stop-2" id="stop_id_12463" data-stop-id="12463">
+              <col class="stop-3" id="stop_id_10448" data-stop-id="10448">
+              <col class="stop-4" id="stop_id_10480" data-stop-id="10480">
+              <col class="stop-5" id="stop_id_10413" data-stop-id="10413">
+              <col class="stop-6" id="stop_id_21849" data-stop-id="21849">
+              <col class="stop-7" id="stop_id_11974" data-stop-id="11974">
+              <col class="stop-8" id="stop_id_21665" data-stop-id="21665">
+              <col class="stop-9" id="stop_id_18865" data-stop-id="18865">
+              <col class="stop-10" id="stop_id_21419" data-stop-id="21419">
+              <col class="stop-11" id="stop_id_20394" data-stop-id="20394">
+              <col class="stop-12" id="stop_id_19921" data-stop-id="19921">
+              <col class="stop-13" id="stop_id_19504" data-stop-id="19504">
+              <col class="stop-14" id="stop_id_16178" data-stop-id="16178">
+              <col class="stop-15" id="stop_id_19486" data-stop-id="19486">
+              <col class="stop-16" id="stop_id_19487" data-stop-id="19487">
+              <col class="stop-17" id="stop_id_19488" data-stop-id="19488">
+              <col class="stop-18" id="stop_id_19842" data-stop-id="19842">
+              <col class="stop-19" id="stop_id_19489" data-stop-id="19489">
+              <col class="stop-20" id="stop_id_19490" data-stop-id="19490">
+              <col class="stop-21" id="stop_id_19491" data-stop-id="19491">
+              <col class="stop-22" id="stop_id_19492" data-stop-id="19492">
+              <col class="stop-23" id="stop_id_33101" data-stop-id="33101">
+              <col class="stop-24" id="stop_id_21386" data-stop-id="21386">
+              <col class="stop-25" id="stop_id_19493" data-stop-id="19493">
+              <col class="stop-26" id="stop_id_14558" data-stop-id="14558">
+              <col class="stop-27" id="stop_id_14523" data-stop-id="14523">
+              <col class="stop-28" id="stop_id_20876" data-stop-id="20876">
+              <col class="stop-29" id="stop_id_20877" data-stop-id="20877">
+              <col class="stop-30" id="stop_id_20878" data-stop-id="20878">
+              <col class="stop-31" id="stop_id_20879" data-stop-id="20879">
+              <col class="stop-32" id="stop_id_20880" data-stop-id="20880">
+              <col class="stop-33" id="stop_id_14286" data-stop-id="14286">
+              <col class="stop-34" id="stop_id_14237" data-stop-id="14237">
+              <col class="stop-35" id="stop_id_13276" data-stop-id="13276">
+              <col class="stop-36" id="stop_id_13279" data-stop-id="13279">
+              <col class="stop-37" id="stop_id_15772" data-stop-id="15772">
+              <col class="stop-38" id="stop_id_15774" data-stop-id="15774">
+              <col class="stop-39" id="stop_id_26196" data-stop-id="26196">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Civic Center Station Gate 6</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Broadway &amp; W 13th Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Broadway &amp; W 9th Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">E 1st Ave &amp; Lafayette St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">E 1st Ave &amp; University Blvd</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">1st Ave &amp; Fillmore Plaza</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Steele St &amp; Ellsworth Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">E Alameda Ave &amp; S Colorado Blvd</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Leetsdale Dr &amp; S Cherry St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Leetsdale Dr &amp; S Forest St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Leetsdale Dr &amp; S Holly St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Leetsdale Dr &amp; Exposition Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southwest</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Leetsdale Dr &amp; S Monaco Pkwy</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Leetsdale Dr &amp; S Oneida St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Quebec St &amp; Leetsdale Dr</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Quebec St &amp; Mississippi Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Quebec St &amp; Arkansas Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Florida Ave &amp; S Quebec St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Florida Ave &amp; S Syracuse St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Quebec Way &amp; Florida Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Quebec Way &amp; Iowa Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Quebec Way &amp; Colorado Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Quebec Way &amp; Colorado Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Quebec Wy &amp; Xenia Wy</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Quebec Way &amp; S Xenia Way</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Yosemite St &amp; Warren Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Iliff Ave &amp; S Yosemite St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Iliff Ave &amp; S Dayton St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Dayton Way &amp; Iliff Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Dayton Way &amp; Harvard Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Dayton Way &amp; Vassar Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Yale Ave &amp; S Elmira St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Northeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Yale Ave &amp; S Havana St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Havana St &amp; Yale Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Havana St &amp; Yale Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling South</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Dartmouth Ave &amp; E Bethany Dr</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Dartmouth Ave &amp; S Kenton St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling East</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Parker Rd &amp; Dartmouth Ave</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">S Parker Rd &amp; S Peoria St</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling Southeast</div>
+                </th>
+                <th class="stop-header" scope="col" width="2.50%">
+                  <div class="stop-name">Nine Mile Station Gate F</div>
+                  <div class="stop-code"></div>
+                  <div class="stop-description">Vehicles Travelling West</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_6596467">
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:14am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:17am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:18am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">6:23am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:26am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:27am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:28am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:31am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:32am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:33am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:34am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:49am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596461">
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:44am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:47am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">6:48am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">6:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:56am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:57am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:58am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:01am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:04am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:06am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:09am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:09am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:11am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:11am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:11am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:12am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:12am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:12am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:13am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:16am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:16am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:19am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:19am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:21am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:22am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:23am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:24am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:26am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596462">
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:09am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:12am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:14am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:23am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:24am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:25am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:29am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:31am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:32am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:34am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:49am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596463">
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:39am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:42am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">7:44am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:54am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:59am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:01am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:04am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:05am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:06am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:09am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:09am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:11am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:11am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:12am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:13am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:13am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:16am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:19am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:21am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:22am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:23am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:25am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596464">
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">8:09am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">8:12am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am no-drop-off"><span class="stop-time-text">8:14am</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time am"><span class="stop-time-text">8:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:23am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:24am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:25am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:29am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:31am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:32am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:34am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:49am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596465">
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:14pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:17pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:18pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:46pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:51pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:58pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596466">
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:44pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:47pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:48pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:57pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:12pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:12pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:28pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596468">
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">3:18pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">3:21pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">3:23pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:37pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:57pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:57pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:02pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:13pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596460">
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">4:18pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">4:21pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">4:23pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:37pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:57pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:57pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:02pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:13pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596459">
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">4:48pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">4:51pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">4:53pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:32pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:37pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:43pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596458">
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">5:18pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">5:21pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">5:23pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:37pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:57pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:57pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:02pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:13pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596457">
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">5:48pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">5:51pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">5:53pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:32pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:37pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:43pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6596469">
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">6:33pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">6:36pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">6:38pm</span><a class="symbol" href="#note-79L|1111100|0-no-dropoff">‡</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:02pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:12pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:12pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:28pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div class="notes">
+            <div class="note" id="note-79L|1111100|0-no-dropoff">‡ = No drop-off available</div>
+          </div>
+          <div class="included-dates">Service provided on: May 14, 2012, May 15, 2012, May 16, 2012, May 17, 2012, May 18, 2012, May 21, 2012, May 22, 2012, May 23, 2012, May 24, 2012, May 25, 2012, May 29, 2012, May 30, 2012, May 31, 2012, Jun 1, 2012, Jun 4, 2012, Jun 5, 2012, Jun 6, 2012, Jun 7, 2012, Jun 8, 2012, Jun 11, 2012, Jun 12, 2012, Jun 13, 2012, Jun 14, 2012, Jun 15, 2012, Jun 18, 2012, Jun 19, 2012, Jun 20, 2012, Jun 21, 2012, Jun 22, 2012, Jun 25, 2012, Jun 26, 2012, Jun 27, 2012, Jun 28, 2012, Jun 29, 2012, Jul 2, 2012, Jul 3, 2012, Jul 5, 2012, Jul 6, 2012, Jul 9, 2012, Jul 10, 2012, Jul 11, 2012, Jul 12, 2012, Jul 13, 2012, Jul 16, 2012, Jul 17, 2012, Jul 18, 2012, Jul 19, 2012, Jul 20, 2012, Jul 23, 2012, Jul 24, 2012, Jul 25, 2012, Jul 26, 2012, Jul 27, 2012, Jul 30, 2012, Jul 31, 2012, Aug 1, 2012, Aug 2, 2012, Aug 3, 2012, Aug 6, 2012, Aug 7, 2012, Aug 8, 2012, Aug 9, 2012, Aug 10, 2012, Aug 13, 2012, Aug 14, 2012, Aug 15, 2012, Aug 16, 2012, Aug 17, 2012</div>
+          <div class="excluded-dates">Service NOT provided provided on: May 19, 2012, May 20, 2012, May 26, 2012, May 27, 2012, May 28, 2012, Jun 2, 2012, Jun 3, 2012, Jun 9, 2012, Jun 10, 2012, Jun 16, 2012, Jun 17, 2012, Jun 23, 2012, Jun 24, 2012, Jun 30, 2012, Jul 1, 2012, Jul 4, 2012, Jul 7, 2012, Jul 8, 2012, Jul 14, 2012, Jul 15, 2012, Jul 21, 2012, Jul 22, 2012, Jul 28, 2012, Jul 29, 2012, Aug 4, 2012, Aug 5, 2012, Aug 11, 2012, Aug 12, 2012</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
