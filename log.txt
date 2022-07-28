@@ -1,13 +1,13 @@
 Feed Version: Unknown
-GTFS-to-HTML Version: 2.4.0
-Date Generated: Mon Jul 25 2022 23:18:42 GMT-0600 (Mountain Daylight Time)
+GTFS-to-HTML Version: 2.4.2
+Date Generated: Wed Jul 27 2022 16:42:41 GMT-0600 (Mountain Daylight Time)
 Timetable Page Count: 612
 Timetable Count: 612
 Calendar Service ID Count: 612
 Route Count: 612
 Trip Count: 17374
 Stop Count: 32561
-Source: https://web.archive.org/web/20120716045659if_/http://www.rtd-denver.com/GoogleFeeder/google_transit_May12_Runboard.zip 
+Source: https://web.archive.org/web/20120716045659if_/http://www.rtd-denver.com/GoogleFeeder/google_transit_May12_Runboard.zip
 
 Warnings:
 No timetables found for timetable_page_id=326|0000001|0
